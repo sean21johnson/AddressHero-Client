@@ -1,0 +1,47 @@
+.footer {
+	width: 100%;
+	background-color: rgb(255, 81, 81);
+}
+
+.footer_brand-container {
+	text-align: center;
+}
+
+.copyright-text {
+	color: #f7f6f6;
+	font-family: system-ui;
+	font-size: 13px;
+}
+
+.github {
+	color: white;
+	margin-right: 8px;
+}
+
+.linkedin {
+	color: white;
+}
+
+.footer_social-media {
+	padding-top: 7px;
+	margin-bottom: -10px;
+}
+
+.copyright_paragraph {
+	padding-bottom: 4px;
+}
+
+.github_logo {
+	margin-right: 12px;
+}
+
+@media all and (min-width: 700px) {
+	.copyright_paragraph {
+		font-size: 18px;
+	}
+
+	.github_logo,
+	.linkedin_logo {
+		font-size: 25px;
+	}
+}

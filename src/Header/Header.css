@@ -1,0 +1,71 @@
+.nav_bar {
+	display: flex;
+	background-color: rgb(255, 81, 81);
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav_logins {
+	padding-right: 15px;
+}
+
+.nav_logo {
+	display: contents;
+}
+
+.login_button {
+	margin-right: 10px;
+	background-color: azure;
+	border-radius: 5px;
+	font-family: ui-monospace;
+	font-size: 14px;
+}
+
+.logout_button {
+	margin-right: 5px;
+	margin-left: 10px;
+	background-color: azure;
+	border-radius: 5px;
+	font-family: ui-monospace;
+	font-size: 14px;
+}
+
+.join_button {
+	background-color: azure;
+	border-radius: 5px;
+	font-family: ui-monospace;
+	font-size: 14px;
+}
+
+.about_button {
+	margin-right: 10px;
+	background-color: azure;
+	border-radius: 5px;
+	font-family: ui-monospace;
+	font-size: 14px;
+}
+
+.hero_home_link {
+	margin: 14px;
+	font-family: monospace;
+	font-variant-caps: petite-caps;
+	font-weight: bold;
+	font-size: 18px;
+	color: azure;
+	text-decoration: none;
+}
+
+@media all and (min-width: 700px) {
+	.hero_home_link {
+		font-size: 25px;
+	}
+
+	.login_button,
+	.about_button,
+	.logout_button,
+	.join_button {
+		font-size: 20px;
+		margin-left: 40px;
+		margin-right: 20px;
+	}
+}

@@ -1,0 +1,130 @@
+import React, { Component } from 'react';
+import Header from './../Header/Header';
+import Footer from './../Footer/Footer';
+import config from './../config';
+import './Register.css';
+
+class Register extends Component {
+    state = {
+        error: ""
+    }
+
+    handleClickCancel = () => {
+        this.history.props.push('/');
+    }
+
+    handleRegisterSubmit = (event) => {
+        event.preventDefault();
+        const { first_name, last_name, email, username, password } = event.target;
+        const newUser = {
+            first_name: first_name.value,
+            last_name: last_name.value,
+            email: email.value,
+            username: username.value,
+            password: password.value
+        }
+        fetch(`${config.HERO_API_ENDPOINT}/api/users`, {
+            method: "POST",
+            body: JSON.stringify(newUser),
+            headers: {
+                "content-type": "application/json"
+            }
+        })
+        .then((response) => {
+            if (!response.ok) {
+                return response.json().then((e) => Promise.reject(e))
+            }
+        })
+        .then((user) => {
+            this.props.history.push("/login")
+        })
+        .catch((e) => {
+            this.setState({
+                error: e
+            })
+        })
+
+    }
+
+	render() {
+		return (
+			<>
+				<Header></Header>
+				<div className="Register">
+					<h2 className="Register_Header">Register Here</h2>
+					<form className="Register_Form" onSubmit={this.handleRegisterSubmit}>
+						<div className="First_Name_Div">
+							<label className="First_Name_Class" htmlFor="first_name">
+								First Name:
+							</label>
+							<input
+								type="text"
+								name="first_name"
+								id="first_name"
+								required
+							></input>
+						</div>
+						<div className="Last_Name_Div">
+							<label className="Last_Name_Class" htmlFor="last_name">
+								Last Name:
+							</label>
+							<input
+								type="text"
+								name="last_name"
+								id="last_name"
+								required
+							></input>
+						</div>
+						<div className="Email_Div">
+							<label className="Email_Class" htmlFor="email">
+								Email:
+							</label>
+							<input type="text" name="email" id="email" required></input>
+						</div>
+						<div className="Username_Div">
+							<label className="Username_Class" htmlFor="username">
+								Username:
+							</label>
+							<input type="text" name="username" id="username" required></input>
+						</div>
+						<div className="Password_Div">
+							<label className="Password_Class" htmlFor="password">
+								Password:
+							</label>
+							<input
+								type="password"
+								name="password"
+								id="password"
+								required
+							></input>
+						</div>
+						<div className="CreateUser_Buttons">
+							<button
+								className="CreateUser_Cancel_Button"
+								type="button"
+								onClick={this.handleClickCancel}
+							>
+								Cancel
+							</button>
+							<button className="CreateUser_Submit_Button" type="submit">
+								Submit
+							</button>
+						</div>
+					</form>
+
+					{this.state.error !== "" ? (
+						<div className="Error_Message">
+							Error: {JSON.stringify(this.state.error).slice(10).slice(0, -2)}.
+							Please try again.
+						</div>
+					) : (
+						""
+					)}
+				</div>
+				<Footer></Footer>
+			</>
+		);
+	}
+}
+ 
+export default Register;
