@@ -11,24 +11,15 @@ class LandingPage extends Component {
             <>
             <Header></Header>
             <div className="LandingPage">
-                <h1>small Talk</h1>
+                <h1>Address Hero</h1>
                 <div className="LandingPage_Sections">
                     <section className="LandingPage_Description">
                         <h2 className="LandingPage_Description_Header">How We Can Help You</h2>
                         <p className="LandingPage_Description_Paragraph">
-                            Reaching out to someone who you haven't spoken to in a while can be awkward, especially
-                            during the first minute. That first minute, though, is crucial in building rapport. Ideally, 
-                            you want to lead with a light talking point demonstrating that you remember some aspect about their life. 
-                            But how can we quickly come up with relatable banter when we can't remember a single thing
-                            about this person? Enter Small Talk! Small Talk is here to end awkward silences and give you that 
-                            personalized tidbit you can lead the conversation with.
+
                         </p>
                         <p className="LandingPage_Description_Paragraph">
-                            Users create and store contact cards in their Small Talk Address Book. Prior to reaching out to someone, 
-                            pull up their contact card and with the simple click of a button, Small Talk will generate a personalized
-                            talking point for you. Small Talk's technology utilizes the details stored in the contact card 
-                            to communicate with 3rd party API's. These API's provide current news updates which can ultimately be used
-                            to discuss something relevant with the person you are reaching out to.
+
                         </p>
                     </section>
                     <section className="LandingPage_GettingStarted">

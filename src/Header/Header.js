@@ -24,11 +24,11 @@ class Header extends Component {
 				<nav className="nav_bar">
 					<div className="nav_logo">
 						<Link
-							to="/api/addresses"
+							to="/addresses"
 							onClick={this.handleHeroClick}
 							className="hero_home_link"
 						>
-							<FontAwesomeIcon icon={faComments} /> smallTalk
+							<FontAwesomeIcon icon={faComments} /> addressHero
 						</Link>
 					</div>
 					<div className="nav_logins">
@@ -53,11 +53,11 @@ class Header extends Component {
 				<nav className="nav_bar">
 					<div className="header_logo">
 						<Link
-							to="/api/addresses"
+							to="/addresses"
 							onClick={this.handleHeroClick}
 							className="hero_home_link"
 						>
-							<FontAwesomeIcon icon={faComments} /> smallTalk
+							<FontAwesomeIcon icon={faComments} /> addressHero
 						</Link>
 					</div>
 					<div className="nav_logins">

@@ -2,19 +2,18 @@ import React from 'react';
 
 export default React.createContext({
     addresses: [],
+    timeline: [],
     indexOfAddress: null,
     addressId: null,
     searchText: "",
-    weatherResponse: {},
+    getTimeline: () => {},
     getAllAddresses: () => {},
-    getTheWeather: () => {},
     handleAddAddress: () => {},
     handleDeleteAddress: () => {},
     handleUpdateAddress: () => {},
     handleSearchFilter: () => {},
     handleSearchUpdate: () => {},
-    handleUpdateIndex: () => {},
+    handleUpdateStateIndex: () => {},
     handleUpdateAddressId: () => {},
     handleUpdateLoggedInOrOut: () => {}
-
 })

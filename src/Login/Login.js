@@ -24,6 +24,7 @@ class Login extends Component {
             username: login_username.value,
             password: login_password.value
         }
+
         fetch(`${config.HERO_API_ENDPOINT}/api/login`, {
             method: "POST",
             body: JSON.stringify(loginAttempt),
@@ -35,6 +36,7 @@ class Login extends Component {
             if (!response.ok) {
                 return response.json().then((e) => Promise.reject(e));
             }
+			return response.json();
         })
         .then((confirmedUser) => {
             TokenService.saveAuthToken(confirmedUser.authToken);
