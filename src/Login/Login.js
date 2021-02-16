@@ -40,9 +40,8 @@ class Login extends Component {
         })
         .then((confirmedUser) => {
             TokenService.saveAuthToken(confirmedUser.authToken);
-            this.props.history.push('/addresses')
-            this.context.getAllAddresses();
-            this.context.handleUpdateLoggedInOrOut();
+            this.props.history.push('/contacts')
+            this.context.getAllContacts();
         })
         .catch((e) => {
             this.setState({

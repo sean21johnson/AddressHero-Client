@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default React.createContext({
+    contacts: [],
     addresses: [],
     timeline: [],
     indexOfAddress: null,
@@ -15,5 +16,5 @@ export default React.createContext({
     handleSearchUpdate: () => {},
     handleUpdateStateIndex: () => {},
     handleUpdateAddressId: () => {},
-    handleUpdateLoggedInOrOut: () => {}
+    handleAddToTimeline: () => {}
 })

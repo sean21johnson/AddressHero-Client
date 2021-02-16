@@ -11,7 +11,7 @@ class TimelineItem extends Component {
         
         return ( 
             <>
-            Hello
+            Item
             </>
          );
     }

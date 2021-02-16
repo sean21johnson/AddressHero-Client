@@ -7,14 +7,17 @@ import PrivateRoute from './../Utils/PrivateRoute';
 // import PublicOnlyRoute from './../Utils/PublicRoute';
 import LandingPage from './../LandingPage/LandingPage';
 import CreateNewAddress from './../CreateNewAddress/CreateNewAddress';
-import AddressList from './../AddressList/AddressList';
+// import AddressList from './../AddressList/AddressList';
 import Login from './../Login/Login';
 import Register from './../Register/Register';
 import './App.css';
 import Timeline from './../Timeline/Timeline';
+import ContactList from './../ContactList/ContactList';
+import ContactProfile from './../ContactProfile/ContactProfile';
 
 class App extends Component {
   state = { 
+    contacts: [],
     addreses: [],
     timeline: [],
     indexOfAddress: null,
@@ -33,7 +36,6 @@ class App extends Component {
       })
     ])
     .then(([response]) => {
-        console.log('made it here')
         if (!response.ok) {
           return response.json().then((error) => Promise.reject(error))
         }
@@ -49,9 +51,9 @@ class App extends Component {
     })
   }
 
-  getAllAddresses = () => {
+  getAllContacts = () => {
     Promise.all([
-      fetch(`${config.HERO_API_ENDPOINT}/api/addresses`, {
+      fetch(`${config.HERO_API_ENDPOINT}/api/contacts`, {
         headers: {
           authorization: `bearer ${TokenService.getAuthToken()}`
         }
@@ -61,9 +63,9 @@ class App extends Component {
         if (!response.ok) return response.json().then((e) => Promise.reject(e));
         return Promise.all([response.json()]);
       })
-      .then(([addresses]) => {
+      .then(([contacts]) => {
         this.setState({
-          addresses,
+          contacts,
           searchName: "",
         })
       })
@@ -138,16 +140,15 @@ class App extends Component {
     })
   }
 
-  handleUpdateLoggedInOrOut = () => {
+  handleAddToTimeline = (timelinePost) => {
     this.setState({
-      loggedIn: true
+      timeline: [...this.state.timeline, timelinePost]
     })
   }
 
   componentDidMount() {
     if (TokenService.hasAuthToken()) {
-      this.getAllAddresses();
-      this.getTimeline();
+      this.getAllContacts();
       return;
     }
   }
@@ -157,9 +158,12 @@ class App extends Component {
       <>
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <PrivateRoute path="/add-address" component={CreateNewAddress} />
-          <PrivateRoute path="/addresses" component={AddressList} />
-          <Route path="/addresses" component={AddressList} />
+          <PrivateRoute path="/add-contact" component={CreateNewAddress} />
+          {/* <PrivateRoute path="/contacts" component={AddressList} /> */}
+          <Route exact path="/contacts" component={ContactList} />
+          <Route path={`/contacts/:id`}>
+            <ContactProfile />
+          </Route>
 
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
@@ -171,13 +175,15 @@ class App extends Component {
 
   render() { 
     const value = {
+      contacts: this.state.contacts,
       addresses: this.state.addresses,
       timeline: this.state.timeline,
       indexOfAddress: this.state.indexOfAddress,
       addressId: this.state.addressId,
       searchText: this.state.searchText,
+      getAllContacts: this.getAllContacts,
       getTimeline: this.getTimeline,
-      getAllAddresses: this.getAllAddresses,
+      // getAllAddresses: this.getAllAddresses,
       handleAddAddress: this.handleAddAddress,
       handleDeleteAddress: this.handleDeleteAddress,
       handleUpdateAddress: this.handleUpdateAddress,
@@ -185,13 +191,12 @@ class App extends Component {
       handleSearchUpdate: this.handleSearchUpdate,
       handleUpdateStateIndex: this.handleUpdateStateIndex,
       handleUpdateAddressId: this.handleUpdateAddressId,
-      handleUpdateLoggedInOrOut: this.handleUpdateLoggedInOrOut,
+      handleAddToTimeline: this.handleAddToTimeline
     }
 
 
     return ( 
       <>
-      {console.log(this.state.timeline)}
       <ApiContext.Provider value={value}>
         <main className="App">{this.renderRoutes()}</main>
       </ApiContext.Provider>

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './CreateNewAddress.css';
-import Header from './../Header/Header';
-import Footer from './../Footer/Footer';
 import ApiContext from '../ApiContext';
 import config from './../config';
 import TokenService from './../services/TokenServices';
@@ -53,22 +51,9 @@ class CreateNewAddress extends Component {
     render() {
 		return (
 			<>
-				<Header></Header>
-				<section className="Create_NewAddress">
-					<h2 className="Create_NewAddress_Header">Add New Contact</h2>
-					<form className="Create_NewAddress_Form" onSubmit={this.handleSubmit}>
-						<div className="Contact_Name_Div">
-							<label className="Contact_Name_Class" htmlFor="contact_name">
-								Contact Name
-							</label>
-							<input
-								type="text"
-								name="contact_name"
-								id="contact_name"
-                                placeholder="LeBron James"
-								required
-							></input>
-						</div>
+          <div>
+            {this.state.contact !== null ? <h2>Add New Address for {this.state.contact.fullname}</h2> : ''}
+					<form className="Create_NewAddress_Form" onSubmit={this.addNewAddress}>
 						<div className="Address_Street_Div">
 							<label className="Address_Street_Class" htmlFor="address_street">
 								Street Address
@@ -77,7 +62,6 @@ class CreateNewAddress extends Component {
 								type="text"
 								name="address_street"
 								id="address_street"
-								placeholder="1111 S Figueroa St"
 								required
 							></input>
 						</div>
@@ -91,7 +75,6 @@ class CreateNewAddress extends Component {
 								type="text"
 								name="address_city"
 								id="address_city"
-								placeholder="Los Angeles"
 								required
 							></input>
 						</div>
@@ -168,7 +151,6 @@ class CreateNewAddress extends Component {
 								type="text"
 								name="address_zip"
 								id="address_zip"
-								placeholder="90015"
 								required
 							></input>
 						</div>
@@ -181,20 +163,6 @@ class CreateNewAddress extends Component {
 								type="text"
 								name="address_map"
 								id="address_map"
-								placeholder="90015"
-								required
-							></input>
-						</div>
-
-                        <div className="Contact_Phone_Div">
-							<label className="Contact_Phone_Class" htmlFor="phone_number">
-								Phone Number
-							</label>
-							<input
-								type="text"
-								name="phone_number"
-								id="phone_number"
-								placeholder="555-555-5555"
 								required
 							></input>
 						</div>
@@ -212,9 +180,7 @@ class CreateNewAddress extends Component {
 							</button>
 						</div>
 					</form>
-
-				</section>
-				<Footer></Footer>
+          </div>
 			</>
 		);
 	}

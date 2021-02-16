@@ -15,7 +15,7 @@ class AddressList extends Component {
     static contextType = ApiContext;
 
     render() { 
-        const { addresses } = this.context;
+        const { contacts } = this.context;
 
         return ( 
             <>
@@ -24,17 +24,10 @@ class AddressList extends Component {
                     <ul className="AddressList_List">
                         <h3 className="AddressList_Header">Address Book</h3>
 
-                        {addresses !== undefined && (
+                        {contacts !== undefined && (
 
                         <div className="Address_Container">
-                            {addresses.map((address, index) => (
-                                <AddressItem
-                                    index={index}
-                                    key={address.contact_id}
-                                    id={address.contact_id}
-                                    {...address}
-                                />
-                            ))}
+                            {contacts.map((contact, index) => contact.fullname)}
                         </div>
 
 )}

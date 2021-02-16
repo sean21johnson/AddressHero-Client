@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComments, faCommentDots } from "@fortawesome/free-solid-svg-icons";
+import { faListAlt, faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import ApiContext from '../ApiContext';
 import './Header.css';
@@ -10,12 +10,15 @@ class Header extends Component {
     static contextType = ApiContext;
 
     handleHeroClick = () => {
-        this.context.getAllAddresses();
+        this.context.getAllContacts();
     }
+
+	handleTimelineClick = () => {
+		this.context.getTimeline()
+	}
 
     handleLogoutClick = () => {
         TokenService.clearAuthToken();
-        this.context.handleUpdateLoggedInOrOut();
     }
 
     renderLoginLink() {
@@ -28,10 +31,16 @@ class Header extends Component {
 							onClick={this.handleHeroClick}
 							className="hero_home_link"
 						>
-							<FontAwesomeIcon icon={faComments} /> addressHero
+							<FontAwesomeIcon icon={faAddressBook} /> addressHero
 						</Link>
 					</div>
 					<div className="nav_logins">
+						<Link 
+							to="/timeline"
+							onClick={this.handleAddressClick}
+							>
+							<FontAwesomeIcon icon={faListAlt} />
+						</Link>
 						<Link to="/">
 							<button className="about_button">About</button>
 						</Link>
@@ -53,14 +62,20 @@ class Header extends Component {
 				<nav className="nav_bar">
 					<div className="header_logo">
 						<Link
-							to="/addresses"
+							to="/contacts"
 							onClick={this.handleHeroClick}
 							className="hero_home_link"
 						>
-							<FontAwesomeIcon icon={faComments} /> addressHero
+							<FontAwesomeIcon icon={faAddressBook} /> addressHero
 						</Link>
 					</div>
 					<div className="nav_logins">
+						<Link 
+							to="/timeline"
+							onClick={this.handleAddressClick}
+							>
+							<FontAwesomeIcon icon={faListAlt} />
+						</Link>
 						<Link to="/">
 							<button className="about_button">About</button>
 						</Link>
