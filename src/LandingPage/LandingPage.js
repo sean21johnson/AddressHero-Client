@@ -61,22 +61,24 @@ class LandingPage extends Component {
 							that we have to offer.
 						</p>
                         <table className="LandingPage_Demo_Table">
-                            <tr>
-                                <th className="Demo_Table_Header Login">
-                                    Login
-                                </th>
-                                <th className="Demo_Table_Header Password">
-                                    Password
-                                </th>
-                            </tr>
-                            <tr>
-                                <td className="Login_Account">
-                                    TestAccount
-                                </td>
-                                <td className="Login_Password">
-                                    Hero123!
-                                </td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <th className="Demo_Table_Header Login">
+                                        Login
+                                    </th>
+                                    <th className="Demo_Table_Header Password">
+                                        Password
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td className="Login_Account">
+                                        TestAccount
+                                    </td>
+                                    <td className="Login_Password">
+                                        Hero123!
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
 					</section>
                 </div>

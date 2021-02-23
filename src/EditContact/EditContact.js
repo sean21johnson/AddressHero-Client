@@ -37,9 +37,17 @@ class EditContact extends Component {
         })
     }
 
+    formatPhoneNumber = (number) => {
+        let firstThree = number.substring(0, 3);
+        let nextThree = number.substring(3, 6)
+        let lastFour = number.substring(6, 10)
+
+        return `(${firstThree}) ${nextThree}-${lastFour}`;
+    }
+
     render() {     
 
-        const {picture, fullname, phone_number, handleClickCancel, formatPhoneNumber} = this.props
+        const {picture, fullname, phone_number, handleClickCancel} = this.props
 
         return ( 
             <>
@@ -69,7 +77,7 @@ class EditContact extends Component {
                             type="text"
                             name="contact_phone"
                             id="contact_phone"
-                            placeholder={formatPhoneNumber(phone_number)}
+                            placeholder={this.formatPhoneNumber(phone_number)}
                             required
                         >
                         </input>

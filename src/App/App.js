@@ -75,12 +75,6 @@ class App extends Component {
     })
   }
 
-  handleProfileButtonViewToTrue = () => {
-    this.setState({
-      profileButtonView: true
-    })
-  }
-
   getAllContacts = () => {
     Promise.all([
       fetch(`${config.HERO_API_ENDPOINT}/api/contacts`, {
@@ -235,8 +229,7 @@ class App extends Component {
       handleAddToTimeline: this.handleAddToTimeline,
       updateContactList: this.updateContactList,
       formatPhoneNumber: this.formatPhoneNumber,
-      handleProfileButtonViewToFalse: this.handleProfileButtonViewToFalse,
-      handleProfileButtonViewToTrue: this.handleProfileButtonViewToTrue
+      handleProfileButtonViewToFalse: this.handleProfileButtonViewToFalse
     }
 
 
