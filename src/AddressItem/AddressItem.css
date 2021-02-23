@@ -1,0 +1,33 @@
+.AddressItem_AddressLine {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.AddressItem_Map {
+    margin-top: 10px;
+}
+
+.AddressItem_Button {
+    background-color: rgb(255, 59, 59);
+	font-size: 14px;
+	border-radius: 5px;
+	font-family: arial;
+	color: azure;
+	font-weight: bold;
+	border: 1px solid silver;   
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.AddressItem_Box {
+    text-align: center;
+    background-color: white;
+    margin-left: 20px;
+    border: 1px dotted coral;
+    margin-bottom: 10px;
+}
+
+.AddressMap_Border {
+    border-radius: 10px;
+}
+

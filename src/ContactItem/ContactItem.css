@@ -1,0 +1,122 @@
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.Contact_Image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+li.Contact_Items {
+    display: flex;
+    flex-direction: row;
+    border: 1px groove lightblue;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.Contact_Image_Div {
+    flex: 1;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.Contact_Details_Div {
+    flex: 1;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.Contact_Profile_Button  {
+    background-color: azure;
+	font-size: 12px;
+	border-radius: 5px;
+	font-family: arial;
+	color: rgb(255, 59, 59);
+	font-weight: bold;
+	border: 1px solid silver;
+}
+
+.Contact_Delete_Button {
+    background-color: rgb(255, 59, 59);
+	font-size: 14px;
+	border-radius: 5px;
+	font-family: arial;
+	color: azure;
+	font-weight: bold;
+	border: 1px solid silver;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.Contact_Name_Container, .Contact_Name_Number {
+    border: 1px dotted lightblue;
+    margin-bottom: 10px;
+    background-color: rgb(226, 248, 255);
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+.Contact_Name_Title, .Contact_Name_Phone {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-style:italic;
+    font-family: courier;
+}
+
+.Contact_Name_Name, .Contact_Name_TheNumber {
+    font-family: arial;
+    padding-bottom: 5px;
+    color: navy;
+}
+
+.Contact_Name_Name {
+    text-shadow: .5px .5px lightcoral;
+    font-weight: bold;
+}
+
+.Contact_Name_Button {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.Edit_Contact_Button {
+    background-color: azure;
+	font-size: 12px;
+	border-radius: 5px;
+	font-family: arial;
+	color: rgb(255, 59, 59);
+	font-weight: bold;
+	border: 1px solid silver;
+    margin-left: 15px;
+}
+
+
+@media all and (min-width: 700px) {
+    .Contact_Profile_Button, .Edit_Contact_Button {
+        font-size: 20px;
+    }
+    
+    .Contact_Details_Div {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .Contact_Name_Container, .Contact_Name_Number {
+        padding: 10px;
+    }
+
+    .Contact_Delete_Button {
+        font-size: 18px;
+    }
+}
+
+

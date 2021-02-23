@@ -1,59 +1,72 @@
 .nav_bar {
 	display: flex;
-	background-color: rgb(255, 81, 81);
 	justify-content: space-between;
 	align-items: center;
+	background-color: lightblue;
+	border: 2px solid lightslategrey;
+}
+
+.nav_left {
+	align-items: center;
+	margin-left: 10px;
+}
+
+.nav_title {
+	font-size: 16px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: rgb(2, 2, 145);
+	font-variant-caps: petite-caps;
+	text-shadow: 1px 1px ghostwhite;
+}
+
+.timeline_logo, .address_logo {
+	font-size: 25px;
+	color: rgb(255, 86, 86);
+	background-color: ghostwhite;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
+	border: 1px solid gold;
 }
 
 .nav_logins {
-	padding-right: 15px;
+	padding-right: 5px;
 }
 
 .nav_logo {
 	display: contents;
 }
 
-.login_button {
-	margin-right: 10px;
+.nav_left {
+	display: flex;
+}
+
+
+.login_button, .logout_button, .join_button, .about_button {
 	background-color: azure;
+	font-size: 12px;
 	border-radius: 5px;
-	font-family: ui-monospace;
-	font-size: 14px;
+	font-family: arial;
+	color: rgb(255, 59, 59);
+	font-weight: bold;
+	border: 1px solid silver;
+}
+
+.login_button, .about_button {
+	margin-right: 10px;
 }
 
 .logout_button {
 	margin-right: 5px;
 	margin-left: 10px;
-	background-color: azure;
-	border-radius: 5px;
-	font-family: ui-monospace;
-	font-size: 14px;
 }
 
 .join_button {
-	background-color: azure;
-	border-radius: 5px;
-	font-family: ui-monospace;
-	font-size: 14px;
+	margin-right: 2px;
 }
 
-.about_button {
-	margin-right: 10px;
-	background-color: azure;
-	border-radius: 5px;
-	font-family: ui-monospace;
-	font-size: 14px;
-}
 
-.hero_home_link {
-	margin: 14px;
-	font-family: monospace;
-	font-variant-caps: petite-caps;
-	font-weight: bold;
-	font-size: 18px;
-	color: azure;
-	text-decoration: none;
-}
 
 @media all and (min-width: 700px) {
 	.hero_home_link {

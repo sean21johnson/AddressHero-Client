@@ -25,22 +25,30 @@ class Header extends Component {
         return (
 			<header className="header">
 				<nav className="nav_bar">
-					<div className="nav_logo">
-						<Link
-							to="/addresses"
-							onClick={this.handleHeroClick}
-							className="hero_home_link"
-						>
-							<FontAwesomeIcon icon={faAddressBook} /> addressHero
-						</Link>
+					<div className="nav_left">
+						<div className="nav_logo">
+							<Link
+								className="address_logo"
+								to="/contacts"
+								onClick={this.handleHeroClick}
+							>
+								<FontAwesomeIcon icon={faAddressBook} />
+							</Link>
+						</div>
+						<div className="nav_title">
+							<p><strong>AddressHero</strong></p>
+						</div>
+						<div className="nav_timeline_logo">
+							<Link 
+								className="timeline_logo" 
+								to="/timeline"
+								onClick={this.handleTimelineClick}
+								>
+								<FontAwesomeIcon icon={faListAlt} />
+							</Link>
+						</div>
 					</div>
 					<div className="nav_logins">
-						<Link 
-							to="/timeline"
-							onClick={this.handleAddressClick}
-							>
-							<FontAwesomeIcon icon={faListAlt} />
-						</Link>
 						<Link to="/">
 							<button className="about_button">About</button>
 						</Link>
@@ -60,22 +68,30 @@ class Header extends Component {
         return (
 			<header className="header">
 				<nav className="nav_bar">
-					<div className="header_logo">
-						<Link
-							to="/contacts"
-							onClick={this.handleHeroClick}
-							className="hero_home_link"
-						>
-							<FontAwesomeIcon icon={faAddressBook} /> addressHero
-						</Link>
+				<div className="nav_left">
+						<div className="nav_logo">
+							<Link
+								className="address_logo"
+								to="/contacts"
+								onClick={this.handleHeroClick}
+							>
+								<FontAwesomeIcon icon={faAddressBook} />
+							</Link>
+						</div>
+						<div className="nav_title">
+							<p><strong>AddressHero</strong></p>
+						</div>
+						<div className="nav_timeline_logo">
+							<Link 
+								className="timeline_logo" 
+								to="/timeline"
+								onClick={this.handleTimelineClick}
+								>
+								<FontAwesomeIcon icon={faListAlt} />
+							</Link>
+						</div>
 					</div>
 					<div className="nav_logins">
-						<Link 
-							to="/timeline"
-							onClick={this.handleAddressClick}
-							>
-							<FontAwesomeIcon icon={faListAlt} />
-						</Link>
 						<Link to="/">
 							<button className="about_button">About</button>
 						</Link>

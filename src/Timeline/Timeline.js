@@ -29,7 +29,7 @@ class Timeline extends Component {
                             {timeline.map((item, index) => 
                                 <TimelineItem
                                     index={index}
-                                    key={item.timeline_id}
+                                    key={index}
                                     id={item.timeline_id}
                                     {...item}
                                 />
@@ -38,7 +38,9 @@ class Timeline extends Component {
                     )}
                 </ul>
             </section>
+            <div className="Timeline_Footer">
             <Footer></Footer>
+            </div>
             </>
          );
     }

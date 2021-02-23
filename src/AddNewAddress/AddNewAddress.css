@@ -1,0 +1,55 @@
+.AddAddress_Header {
+    font-style:italic;
+    font-family: arial;
+    color: navy;
+    text-shadow: 1px 1px lightcoral;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.Address_Street_Div, .Address_City_Div, .Address_State_Div, .Address_Zip_Div, .Address_Map_Div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.AddAddress_Div {
+    background-color: rgb(228, 248, 255);
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px dotted gold;
+    border-radius: 10px;
+}
+
+.Address_Street_Class, .Address_City_Class, .Address_State_Class, .Address_Zip_Class, .Address_Map_Class {
+    margin-left: 10px;
+    font-size: 16px;
+    font-family: courier;
+    font-weight: bold;
+}
+
+.AddAddress_Input {
+    margin-right: 10px;
+}
+
+.Add_NewAddress_Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    margin-top: 20px; 
+}
+
+.AddAddress_Cancel_Button, .AddAddress_Submit_Button {
+    background-color: azure;
+	font-size: 14px;
+	border-radius: 5px;
+	font-family: arial;
+	color: rgb(255, 59, 59);
+	font-weight: bold;
+	border: 1px solid silver;
+}
+
+

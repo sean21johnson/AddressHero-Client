@@ -1,0 +1,54 @@
+.SendCard_Header {
+    font-style:italic;
+    font-family: arial;
+    color: navy;
+    text-shadow: 1px 1px lightcoral;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-top: 10px; 
+}
+
+.SendCard_Div {
+    background-color: rgb(228, 248, 255);
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px dotted gold;
+    border-radius: 10px;
+}
+
+.SendCard_Class {
+    margin-left: 30px;
+    font-size: 16px;
+    font-family: courier;
+    font-weight: bold;
+}
+
+.SendCard_Item_Div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.SendCard_Input {
+    margin-right: 25px;
+    font-family: arial;
+}
+
+.Add_NewCard_Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    margin-top: 25px; 
+}
+
+.Add_Submit_Button, .Add_Cancel_Button {
+    background-color: azure;
+	font-size: 14px;
+	border-radius: 5px;
+	font-family: arial;
+	color: rgb(255, 59, 59);
+	font-weight: bold;
+	border: 1px solid silver;
+}

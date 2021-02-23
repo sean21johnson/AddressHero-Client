@@ -1,0 +1,108 @@
+
+
+h1 {
+    text-align: center;
+    font-family: arial;
+    font-variant-caps: petite-caps;
+    color: black;
+    margin-top: 20px;
+    background-color: lightcoral;
+    color: white;
+    text-shadow: 1px 1px black;
+    border-radius: 5px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border: 1px groove gold;
+    font-size: 35px;
+}
+
+h2.LandingPage_Description_Header, h2.LandingPage_GettingStarted_Header,
+h2.LandingPage_Demo_Header {
+    text-align: center;
+    font-family: arial;
+    font-style: italic;
+    color: navy;
+    text-shadow: 1px 1px lightcoral;
+}
+
+p.LandingPage_Description_Paragraph, p.LandingPage_Demo_Paragraph,
+p.LandingPage_Demo_Login, p.LandingPage_Demo_Password {
+    margin-left: 15px;
+    margin-right: 10px;
+    text-indent: 15px;
+    font-family: arial;
+    line-height: 1.4;
+
+}
+
+section.LandingPage_GettingStarted {
+    font-family: arial;
+}
+
+li.LandingPage_GettingStarted_Item {
+    line-height: 2;
+}
+
+table.LandingPage_Demo_Table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px black solid;
+    margin-bottom: 50px;
+    background-color: ghostwhite;
+    font-family: courier;
+    margin-top: 25px;
+}
+
+th.Demo_Table_Header {
+  font-size: 20px;  
+  border: 1px solid black;
+  font-style: italic;
+}
+
+th.Password {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+td.Login_Account, td.Login_Password {
+    font-size: 18px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+td.Login_Account {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+@media all and (min-width: 700px) {
+    h1 {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 50px;
+    }
+    
+    .LandingPage {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .LandingPage_Description, .LandingPage_Demo, .LandingPage_GettingStarted {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
+
+    p.LandingPage_Description_Paragraph, p.LandingPage_Demo_Paragraph {
+        line-height: 2;
+    }
+
+    .LandingPage {
+        margin-top: 0px;
+    }
+}
+
+

@@ -1,41 +1,31 @@
 import React, { Component } from 'react';
-import './AddressList.css';
-import Header from './../Header/Header';
-import Footer from './../Footer/Footer';
-import ApiContext from '../ApiContext';
 import AddressItem from './../AddressItem/AddressItem';
+import './AddressList.css'
 
 class AddressList extends Component {
-    static defaultProps = {
-        match: {
-            params: {}
-        }
-    }
-
-    static contextType = ApiContext;
 
     render() { 
-        const { contacts } = this.context;
+
+        const { contactAddresses, contact, deleteAddress} = this.props;
 
         return ( 
             <>
-                <Header></Header>
-                <section className="AddressList">
-                    <ul className="AddressList_List">
-                        <h3 className="AddressList_Header">Address Book</h3>
-
-                        {contacts !== undefined && (
-
-                        <div className="Address_Container">
-                            {contacts.map((contact, index) => contact.fullname)}
-                        </div>
-
-)}
-                    </ul>
-                </section>
-                <Footer></Footer>
+            		<h3 className="Table_Header">
+						{contactAddresses.length > 1 ? "List of Addresses" : "Current Address"}
+					</h3>
+					<div className="ContactList_List">
+						<ul className="ContactList_Unordered">
+						{contact ? contactAddresses.map((contactAddress, index) => (
+							<AddressItem
+								contactAddress={contactAddress}
+								index={index}
+								key={index}
+								deleteAddress={deleteAddress}
+							/>
+						)) : null}
+						</ul>
+					</div>
             </>
-
          );
     }
 }

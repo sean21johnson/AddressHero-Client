@@ -1,90 +1,48 @@
 import React, { Component } from 'react';
-import './CreateNewAddress.css';
-import ApiContext from '../ApiContext';
-import config from './../config';
-import TokenService from './../services/TokenServices';
+import './AddNewAddress.css'
 
-class CreateNewAddress extends Component {
-    static defaultProps = {
-        history: {
-            push: () => {}
-        }
-    }
+class AddNewAddress extends Component {
 
-    static contextType = ApiContext;
+    render() { 
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-        const { contact_name, address_street, address_city, address_state, address_zip, address_map, phone_number } = event.target;
-        let newAddress = {
-            contact_name: contact_name.value,
-            address_street: address_street.value,
-            address_city: address_city.value,
-            address_state: address_state.value,
-            address_zip: address_zip.value,
-            address_map: address_map.value,
-            phone_number: phone_number.value
-        }
-        fetch(`${config.HERO_API_ENDPOINT}/api/addresses`, {
-            method: "POSTS",
-            body: JSON.stringify(newAddress),
-            headers: {
-                'content-type': 'application/json',
-                'authorization': `bearer ${TokenService.getAuthToken()}`
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                return response.json().then((e) => Promise.reject(e))
-            }
-        })
-        .then((address) => {
-            this.context.handleAddAddress(address);
-            this.props.history.push('/addresses')
-        })
-    }
+        const { contact, addNewAddress, handleAddAddressClickCancel } = this.props
 
-    handleClickCancel = () => {
-        this.props.history.push('/addresses')
-    }
-
-    render() {
-		return (
-			<>
-          <div>
-            {this.state.contact !== null ? <h2>Add New Address for {this.state.contact.fullname}</h2> : ''}
-					<form className="Create_NewAddress_Form" onSubmit={this.addNewAddress}>
+        return ( 
+            <>
+            <div className="AddAddress_Div">
+            {contact !== null ? <h2 className="AddAddress_Header">Add Address for {contact.fullname.split(" ")[0]}:</h2> : ''}
+					<form className="Create_NewAddress_Form" onSubmit={addNewAddress}>
 						<div className="Address_Street_Div">
 							<label className="Address_Street_Class" htmlFor="address_street">
-								Street Address
+								Street:
 							</label>
 							<input
+								className="AddAddress_Input"
 								type="text"
 								name="address_street"
 								id="address_street"
 								required
 							></input>
 						</div>
-
-
 						<div className="Address_City_Div">
 							<label className="Address_City_Class" htmlFor="address_city">
-								City
+								City:
 							</label>
 							<input
+								className="AddAddress_Input"
 								type="text"
 								name="address_city"
 								id="address_city"
 								required
 							></input>
 						</div>
-
 						<div className="Address_State_Div">
 							<label className="Address_State_Class" htmlFor="address_state">
-								State
+								State:
 							</label>
 							<select
-								className="Address_State_Dropdown"
+								className="AddAddress_Input"
+								// className="Address_State_Dropdown"
 								name="address_state"
 								required
 							>
@@ -142,48 +100,47 @@ class CreateNewAddress extends Component {
                                 <option value="WY">Wyoming</option>
                             </select>	
 						</div>
-
 						<div className="Address_Zip_Div">
 							<label className="Address_Zip_Class" htmlFor="address_zip">
-								Zip Code
+								Zip Code:
 							</label>
 							<input
+								className="AddAddress_Input"
 								type="text"
 								name="address_zip"
 								id="address_zip"
 								required
 							></input>
 						</div>
-
-                        <div className="Address_Map_Div">
+              <div className="Address_Map_Div">
 							<label className="Address_Map_Class" htmlFor="address_map">
-								Google Maps Link
+								Google Maps Link:
 							</label>
 							<input
+								className="AddAddress_Input"
 								type="text"
 								name="address_map"
 								id="address_map"
 								required
 							></input>
 						</div>
-
-						<div className="Create_NewAddress_buttons">
+						<div className="Add_NewAddress_Buttons">
 							<button
-								className="Create_Cancel_Button"
+								className="AddAddress_Cancel_Button"
 								type="button"
-								onClick={this.handleClickCancel}
+								onClick={handleAddAddressClickCancel}
 							>
 								Cancel
 							</button>
-							<button className="Create_Submit_Button" type="submit">
+							<button className="AddAddress_Submit_Button" type="submit">
 								Save
 							</button>
 						</div>
 					</form>
           </div>
-			</>
-		);
-	}
+            </>
+         );
+    }
 }
  
-export default CreateNewAddress;
+export default AddNewAddress;

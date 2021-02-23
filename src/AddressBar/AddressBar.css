@@ -1,0 +1,32 @@
+.AddressBar {
+    margin-top: 20px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    background-color: lightcoral;
+    padding: 8px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 5px;
+    border: 2px groove lightslategrey;
+}
+
+.AddressBar_NewContact_Button, .AddressBar_SendCard_Button {
+    background-color: azure;
+	font-size: 13px;
+	border-radius: 5px;
+	font-family: arial;
+	color: rgb(255, 59, 59);
+	font-weight: bold;
+	border: 1px solid silver;
+}
+
+.AddressBar_SendCard_Button {
+    margin-left: 30px;
+}
+
+@media all and (min-width: 700px) {
+    .AddressBar_NewContact_Button, .AddressBar_SendCard_Button {
+        font-size: 16px;
+    }
+}

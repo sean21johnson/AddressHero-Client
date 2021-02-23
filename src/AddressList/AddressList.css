@@ -1,0 +1,16 @@
+.Table_Header {
+    font-style:italic;
+    font-family: arial;
+    color: lightcoral;
+    text-shadow: 1px 1px navy;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+ul.ContactList_Unordered {
+    padding-left: 0px;
+    margin-right: 20px;
+}
+

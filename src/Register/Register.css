@@ -1,0 +1,72 @@
+.Register_Header {
+    font-style:italic;
+    font-family: arial;
+    color: navy;
+    text-shadow: 1px 1px lightcoral;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-top: 25px; 
+}
+
+.First_Name_Div, .Last_Name_Div, .Email_Div, .Username_Div, .Password_Div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.Register {
+    margin-top: 40px;
+}
+
+.Register_Form {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.Register_Input {
+    margin-right: 25px;
+}
+
+.Register_Cancel_Button, .Register_Submit_Button {
+    background-color: azure;
+	font-size: 14px;
+	border-radius: 5px;
+	font-family: arial;
+	color: rgb(255, 59, 59);
+	font-weight: bold;
+	border: 1px solid silver;
+}
+
+.Register_Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    margin-top: 45px;
+}
+
+.First_Name_Class, .Last_Name_Class, .Email_Class, .Username_Class, .Password_Class {
+    margin-left: 45px;
+    font-size: 18px;
+    font-family: courier;
+    font-weight: bold;
+}
+
+@media all and (min-width: 700px) {
+    .Register {
+        width: 33%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+    }
+
+    .First_Name_Class, .Last_Name_Class, .Email_Class, .Username_Class, .Password_Class {
+        font-size: 20px;
+    }
+
+    .Register_Cancel_Button, .Register_Submit_Button {
+        font-size: 20px;
+    }
+}
+

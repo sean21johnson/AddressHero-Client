@@ -4,16 +4,14 @@ import ApiContext from '../ApiContext';
 import TokenService from './../services/TokenServices';
 import config from '../config';
 import PrivateRoute from './../Utils/PrivateRoute';
-// import PublicOnlyRoute from './../Utils/PublicRoute';
+import PublicOnlyRoute from './../Utils/PublicRoute';
 import LandingPage from './../LandingPage/LandingPage';
-import CreateNewAddress from './../CreateNewAddress/CreateNewAddress';
-// import AddressList from './../AddressList/AddressList';
 import Login from './../Login/Login';
 import Register from './../Register/Register';
-import './App.css';
 import Timeline from './../Timeline/Timeline';
 import ContactList from './../ContactList/ContactList';
 import ContactProfile from './../ContactProfile/ContactProfile';
+import './App.css';
 
 class App extends Component {
   state = { 
@@ -24,8 +22,18 @@ class App extends Component {
     addressId: null,
     searchText: "",
     weatherResponse: {},
-    loggedIn: false
+    loggedIn: false,
+    profileButtonView: true
   }
+
+  sortTimeline = (timeline) => {
+    timeline.sort((a, b) => b.timeline_id - a.timeline_id)
+    this.setState({
+      timeline: timeline
+    })
+  }
+
+
 
   getTimeline = () => {
     Promise.all([
@@ -42,12 +50,34 @@ class App extends Component {
         return Promise.all([response.json()])
     })
     .then(([timeline]) => {
+      this.sortTimeline(timeline);
       this.setState({
         timeline
       })
     })
     .catch((error) => {
       console.error(error)
+    })
+  }
+
+  sortContacts = (contacts) => {
+    contacts.sort((a, b) => b.id - a.id)
+    this.setState({
+      contacts: contacts
+    })
+  }
+
+
+
+  handleProfileButtonViewToFalse = () => {
+    this.setState({
+      profileButtonView: false
+    })
+  }
+
+  handleProfileButtonViewToTrue = () => {
+    this.setState({
+      profileButtonView: true
     })
   }
 
@@ -64,9 +94,9 @@ class App extends Component {
         return Promise.all([response.json()]);
       })
       .then(([contacts]) => {
+        this.sortContacts(contacts)
         this.setState({
-          contacts,
-          searchName: "",
+          searchText: "",
         })
       })
       .catch((error) => {
@@ -94,6 +124,20 @@ class App extends Component {
 				});
 			});
 	};
+
+  formatPhoneNumber = (number) => {
+    let firstThree = number.substring(0, 3);
+    let nextThree = number.substring(3, 6)
+    let lastFour = number.substring(6, 10)
+
+    return `(${firstThree}) ${nextThree}-${lastFour}`;
+  }
+
+  updateContactList = (contacts) => {
+    this.setState({
+      contacts: contacts
+    })
+  }
 
   handleAddAddress = (address) => {
     this.setState({
@@ -134,9 +178,9 @@ class App extends Component {
     }
   }
 
-  handleSearchUpdate = (searchTerm) => {
+  handleSearchChange = (searchTerm) => {
     this.setState({
-      searchTerm: searchTerm
+      searchText: searchTerm
     })
   }
 
@@ -146,9 +190,11 @@ class App extends Component {
     })
   }
 
+
   componentDidMount() {
     if (TokenService.hasAuthToken()) {
       this.getAllContacts();
+      this.getTimeline()
       return;
     }
   }
@@ -158,16 +204,11 @@ class App extends Component {
       <>
         <Switch>
           <Route exact path="/" component={LandingPage} />
-          <PrivateRoute path="/add-contact" component={CreateNewAddress} />
-          {/* <PrivateRoute path="/contacts" component={AddressList} /> */}
-          <Route exact path="/contacts" component={ContactList} />
-          <Route path={`/contacts/:id`}>
-            <ContactProfile />
-          </Route>
-
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/timeline" component={Timeline} />
+          <PrivateRoute exact path="/contacts" component={ContactList} />
+          <PrivateRoute path="/contacts/:id" component={ContactProfile} />
+          <PublicOnlyRoute path="/login" component={Login} />
+          <PublicOnlyRoute path="/register" component={Register} />
+          <PrivateRoute path="/timeline" component={Timeline} />
         </Switch>
       </>
     )
@@ -181,17 +222,21 @@ class App extends Component {
       indexOfAddress: this.state.indexOfAddress,
       addressId: this.state.addressId,
       searchText: this.state.searchText,
+      profileButtonView: this.state.profileButtonView,
       getAllContacts: this.getAllContacts,
       getTimeline: this.getTimeline,
-      // getAllAddresses: this.getAllAddresses,
       handleAddAddress: this.handleAddAddress,
       handleDeleteAddress: this.handleDeleteAddress,
       handleUpdateAddress: this.handleUpdateAddress,
       handleSearchFilter: this.handleSearchFilter,
-      handleSearchUpdate: this.handleSearchUpdate,
+      handleSearchChange: this.handleSearchChange,
       handleUpdateStateIndex: this.handleUpdateStateIndex,
       handleUpdateAddressId: this.handleUpdateAddressId,
-      handleAddToTimeline: this.handleAddToTimeline
+      handleAddToTimeline: this.handleAddToTimeline,
+      updateContactList: this.updateContactList,
+      formatPhoneNumber: this.formatPhoneNumber,
+      handleProfileButtonViewToFalse: this.handleProfileButtonViewToFalse,
+      handleProfileButtonViewToTrue: this.handleProfileButtonViewToTrue
     }
 
 

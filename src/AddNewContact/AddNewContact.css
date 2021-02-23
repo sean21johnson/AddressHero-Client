@@ -1,0 +1,72 @@
+.AddNewContact {
+    text-align: center;
+    border: 2px dotted lightblue;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.NewContact_Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+label.NewContact_Label {
+    margin-left: 35px;
+    font-size: 16px;
+    font-family: courier;
+    font-weight: bold;
+}
+
+.NewContact_Container_Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.NewContact_Input {
+    margin-right: 20px;
+}
+
+.NewContact_Button {
+    background-color: azure;
+	font-size: 12px;
+	border-radius: 5px;
+	font-family: arial;
+	color: rgb(255, 59, 59);
+	font-weight: bold;
+	border: 1px solid silver;
+}
+
+.NewContact_Header {
+    font-style:italic;
+    font-family: arial;
+    color: navy;
+    text-shadow: 1px 1px lightcoral;
+    letter-spacing: 1.5px;
+}
+
+@media all and (min-width: 700px) {
+    .AddNewContact {
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    label.NewContact_Label {
+        margin-left: 100px;
+        font-size: 22px;
+    }
+
+    .NewContact_Input {
+        margin-right: 100px;
+    }
+    
+    .NewContact_Button {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,89 @@
+img.Timeline_Image {
+    width: 100%;
+    border-radius: 50%
+}
+
+.Timeline_Item_Div {
+    display: flex;
+}
+
+.Timeline_Image_Div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    justify-content: center;
+}
+
+.Timeline_Details_Div {
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+    background-color: rgb(255, 241, 241);
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-family: arial;
+    border-radius: 5px;
+}
+
+.Timeline_Details_Address {
+    font-style: italic;
+    padding: 2px;
+    font-size: 11px;
+    /* border-top: 1px dotted navy; */
+    padding-top: 3px;
+    margin-right: 5px;
+}
+
+.Timeline_Item_ListItem {
+    margin-bottom: 5px;
+    border: 1px solid lightblue;
+    padding: 3px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.Timeline_Details_DateName {
+    font-family: courier;
+    font-size: 11px;
+    padding-bottom: 3px;
+}
+
+.Extra_Bold {
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media all and (min-width: 1000px) {
+    .Timeline_Details_DateName {
+        font-size: 17px;
+    }
+
+    .Extra_Bold {
+        font-size: 20px;
+    }
+
+    .Timeline_Details_Div {
+        flex: 8;
+    }
+
+    .Timeline_Image_Div {
+        flex: 1;
+    }
+
+    .Timeline_Details_Address {
+        font-size: 17px;
+        font-weight:normal;
+        margin-left: 15px;
+    }
+
+    .Timeline_Item_ListItem {
+        margin-bottom: 15px;
+    }
+    
+}
+
+

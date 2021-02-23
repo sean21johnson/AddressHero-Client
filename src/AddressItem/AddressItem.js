@@ -1,36 +1,33 @@
 import React, { Component } from 'react';
-import ApiContext from '../ApiContext';
-import { Link } from "react-router-dom";
-import './AddressItem.css';
-import config from './../config';
+import './AddressItem.css'
 
 class AddressItem extends Component {
 
-    static contextType = ApiContext;
-
-
-
-    render() {
+    handleDeleteAddress = (event, id) => {
+        event.preventDefault();
+        this.props.deleteAddress(id)
+    }
+    
+    render() { 
+    const {contactAddress, deleteAddress} = this.props;
         return ( 
         <>
-            <div>
-                <li>
-                    <div>
-                        {this.props.fullname}
-                    </div>
-                    <div>
-                        <Link
-                            to={`/contacts/${this.props.id}`}
-                        
-                        >
-                        <button>View Profile</button>
-                        </Link>
-                    </div>
-                </li>
-            </div>
+            <li className="AddressItem_Box">
+                <div className="AddressItem_AddressLine">
+                    <p>{`${contactAddress.street}, ${contactAddress.city}, ${contactAddress.us_state} ${contactAddress.zip}`}</p>
+                </div>
+                <div className="AddressItem_Map">
+                    <iframe className="AddressMap_Border" src={contactAddress.map}></iframe>
+                </div>
+                <div>
+                    <form onSubmit={() => deleteAddress(contactAddress.id)}>
+                        <button type="submit" className="AddressItem_Button">Delete Address</button>
+                    </form>
+                </div>
+            </li>
         </>
-        )
-        }
+         );
+    }
 }
  
 export default AddressItem;

@@ -3,15 +3,18 @@ import Header from './../Header/Header';
 import Footer from './../Footer/Footer';
 import config from './../config';
 import './Register.css';
+import ApiContext from '../ApiContext';
 
 class Register extends Component {
     state = {
         error: ""
     }
 
-    handleClickCancel = () => {
-        this.history.props.push('/');
-    }
+	static contextType = ApiContext;
+
+	handleClickCancel = () => {
+		this.props.history.push('/');
+	  }
 
     handleRegisterSubmit = (event) => {
         event.preventDefault();
@@ -58,6 +61,7 @@ class Register extends Component {
 								First Name:
 							</label>
 							<input
+								className="Register_Input"
 								type="text"
 								name="first_name"
 								id="first_name"
@@ -69,6 +73,7 @@ class Register extends Component {
 								Last Name:
 							</label>
 							<input
+								className="Register_Input"
 								type="text"
 								name="last_name"
 								id="last_name"
@@ -79,34 +84,35 @@ class Register extends Component {
 							<label className="Email_Class" htmlFor="email">
 								Email:
 							</label>
-							<input type="text" name="email" id="email" required></input>
+							<input className="Register_Input" type="text" name="email" id="email" required></input>
 						</div>
 						<div className="Username_Div">
 							<label className="Username_Class" htmlFor="username">
 								Username:
 							</label>
-							<input type="text" name="username" id="username" required></input>
+							<input className="Register_Input" type="text" name="username" id="username" required></input>
 						</div>
 						<div className="Password_Div">
 							<label className="Password_Class" htmlFor="password">
 								Password:
 							</label>
 							<input
+								className="Register_Input"
 								type="password"
 								name="password"
 								id="password"
 								required
 							></input>
 						</div>
-						<div className="CreateUser_Buttons">
+						<div className="Register_Buttons">
 							<button
-								className="CreateUser_Cancel_Button"
+								className="Register_Cancel_Button"
 								type="button"
 								onClick={this.handleClickCancel}
 							>
 								Cancel
 							</button>
-							<button className="CreateUser_Submit_Button" type="submit">
+							<button className="Register_Submit_Button" type="submit">
 								Submit
 							</button>
 						</div>
@@ -121,7 +127,9 @@ class Register extends Component {
 						""
 					)}
 				</div>
+				<div className="Register_Footer">
 				<Footer></Footer>
+				</div>
 			</>
 		);
 	}

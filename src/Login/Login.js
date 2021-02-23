@@ -62,6 +62,7 @@ class Login extends Component {
 								Username:
 							</label>
 							<input
+								className="Login_Input"
 								type="text"
 								name="login_username"
 								id="Login_Username"
@@ -73,6 +74,7 @@ class Login extends Component {
 								Password:
 							</label>
 							<input
+								className="Login_Input"
 								type="password"
 								name="login_password"
 								id="login_password"
@@ -102,7 +104,9 @@ class Login extends Component {
 						""
 					)}
 				</div>
+				<div className="Login_Footer">
 				<Footer></Footer>
+				</div>
 			</>
          );
     }

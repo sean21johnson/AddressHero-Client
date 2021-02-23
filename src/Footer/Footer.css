@@ -1,6 +1,7 @@
 .footer {
-	width: 100%;
-	background-color: rgb(255, 81, 81);
+	background-color: lightblue;
+	border: 2px solid lightslategrey;
+	margin-top: 25px;
 }
 
 .footer_brand-container {
@@ -8,31 +9,37 @@
 }
 
 .copyright-text {
-	color: #f7f6f6;
 	font-family: system-ui;
 	font-size: 13px;
 }
 
 .github {
-	color: white;
+	color: ghostwhite;
 	margin-right: 8px;
 }
 
 .linkedin {
-	color: white;
+	color: ghostwhite;
 }
 
 .footer_social-media {
-	padding-top: 7px;
-	margin-bottom: -10px;
+	padding-top: 2px;
 }
 
 .copyright_paragraph {
-	padding-bottom: 4px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	color: ghostwhite;
+	text-shadow: 1px 1px black;
 }
 
 .github_logo {
 	margin-right: 12px;
+	font-size: 20px;
+}
+
+.linkedin_logo {
+	font-size: 20px;
 }
 
 @media all and (min-width: 700px) {
