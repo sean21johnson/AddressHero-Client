@@ -130,7 +130,7 @@ class ContactList extends Component {
                             {contacts.map((contact, index) => 
                                 <ContactItem
                                     index={index}
-                                    key={contact.id}
+                                    key={index}
                                     id={contact.id}
                                     {...contact}
                                 />

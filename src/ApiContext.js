@@ -7,6 +7,7 @@ export default React.createContext({
     indexOfAddress: null,
     addressId: null,
     searchText: "",
+    profileButtonView: true,
     getTimeline: () => {},
     getAllAddresses: () => {},
     handleAddAddress: () => {},
@@ -16,5 +17,8 @@ export default React.createContext({
     handleSearchUpdate: () => {},
     handleUpdateStateIndex: () => {},
     handleUpdateAddressId: () => {},
-    handleAddToTimeline: () => {}
+    handleAddToTimeline: () => {},
+    handleProfileButtonViewToFalse: () => {},
+    handleProfileButtonViewToTrue: () => {},
+    formatPhoneNumber: () => {}
 })

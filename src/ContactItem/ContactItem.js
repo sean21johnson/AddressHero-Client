@@ -37,10 +37,10 @@ class ContactItem extends Component {
             })
     }
 
-    formatPhoneNumber = (number) => {
-        let firstThree = number.substring(0, 3);
-        let nextThree = number.substring(3, 6)
-        let lastFour = number.substring(6, 10)
+    formatPhoneNumber = (phone) => {
+        let firstThree = phone.substring(0, 3);
+        let nextThree = phone.substring(3, 6)
+        let lastFour = phone.substring(6, 10)
 
         return `(${firstThree}) ${nextThree}-${lastFour}`;
     }
