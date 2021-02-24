@@ -90,6 +90,10 @@ class ContactList extends Component {
         })
     }
 
+    componentDidMount = () => {
+        this.context.handleProfileButtonViewToTrue()
+    }
+
     static contextType = ApiContext;
 
     render() { 

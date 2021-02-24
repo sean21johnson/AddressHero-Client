@@ -67,11 +67,15 @@ class App extends Component {
     })
   }
 
-
-
   handleProfileButtonViewToFalse = () => {
     this.setState({
       profileButtonView: false
+    })
+  }
+
+  handleProfileButtonViewToTrue = () => {
+    this.setState({
+      profileButtonView: true
     })
   }
 
@@ -229,7 +233,8 @@ class App extends Component {
       handleAddToTimeline: this.handleAddToTimeline,
       updateContactList: this.updateContactList,
       formatPhoneNumber: this.formatPhoneNumber,
-      handleProfileButtonViewToFalse: this.handleProfileButtonViewToFalse
+      handleProfileButtonViewToFalse: this.handleProfileButtonViewToFalse,
+      handleProfileButtonViewToTrue: this.handleProfileButtonViewToTrue
     }
 
 

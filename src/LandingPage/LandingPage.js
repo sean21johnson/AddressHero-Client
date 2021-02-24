@@ -21,7 +21,7 @@ class LandingPage extends Component {
                             lies in keeping track of people's addresses, and remembering who you have sent cards to.
                         </p>
                         <p className="LandingPage_Description_Paragraph">
-                            Address Hero is here to help you solve both of these problems. On our site users can create contacts and store the addresses
+                            Address Hero is here to help! On our site users can create contacts and store the addresses
                             for these contacts. And when you decide to send a card, Address Hero will log the event. Users can view their Timeline
                             for a history of cards they have sent.  
                         </p>

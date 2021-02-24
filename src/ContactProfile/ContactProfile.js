@@ -200,6 +200,7 @@ class ContactProfile extends Component {
 		let contact_id = this.props.match.params.id;
 		this.getContactProfile(contact_id);
 		this.getContactAddresses(contact_id);
+		this.context.handleProfileButtonViewToFalse()
 	}
 
 	render() {
