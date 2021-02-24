@@ -7,17 +7,17 @@ import Header from "./../Header/Header";
 import Footer from "./../Footer/Footer";
 import AddressList from "./../AddressList/AddressList";
 import AddNewAddress from "./../AddNewAddress/AddNewAddress";
-import SendCard from './../SendCard/SendCard';
-import AddressBar from './../AddressBar/AddressBar';
-import ContactItem from './../ContactItem/ContactItem';
-import './ContactProfile.css'
+import SendCard from "./../SendCard/SendCard";
+import AddressBar from "./../AddressBar/AddressBar";
+import ContactItem from "./../ContactItem/ContactItem";
+import "./ContactProfile.css";
 
 class ContactProfile extends Component {
 	state = {
 		contact: null,
 		contactAddresses: [],
 		addAddressDisplay: false,
-		sendCardDisplay: false
+		sendCardDisplay: false,
 	};
 
 	static contextType = ApiContext;
@@ -129,7 +129,7 @@ class ContactProfile extends Component {
 			.then((address) => {
 				this.setState({
 					contactAddresses: [...this.state.contactAddresses, address],
-					addAddressDisplay: false
+					addAddressDisplay: false,
 				});
 			});
 	};
@@ -160,8 +160,8 @@ class ContactProfile extends Component {
 			})
 			.then((newPost) => {
 				this.setState({
-					sendCardDisplay: false
-				})
+					sendCardDisplay: false,
+				});
 				this.context.handleAddToTimeline(newPost);
 				this.context.getTimeline();
 				this.props.history.push("/timeline");
@@ -170,107 +170,112 @@ class ContactProfile extends Component {
 
 	handleAddAddressClickCancel = () => {
 		this.setState({
-			addAddressDisplay: false
-		})
-	}
+			addAddressDisplay: false,
+		});
+	};
 
 	handleSendCardClickCancel = () => {
 		this.setState({
-			sendCardDisplay: false
-		})
-	}
+			sendCardDisplay: false,
+		});
+	};
 
 	handleAddAddressButtonClicked = () => {
 		this.setState({
-			addAddressDisplay: true
-		})
-	}
+			addAddressDisplay: true,
+		});
+	};
 
 	handleSendCardButtonClicked = () => {
 		this.setState({
-			sendCardDisplay: true
-		})
-	}
+			sendCardDisplay: true,
+		});
+	};
 
 	reDirect = () => {
-		this.props.history.push('/contacts')
-	}
+		this.props.history.push("/contacts");
+	};
 
 	componentDidMount() {
 		let contact_id = this.props.match.params.id;
 		this.getContactProfile(contact_id);
 		this.getContactAddresses(contact_id);
-		this.context.handleProfileButtonViewToFalse()
+		this.context.handleProfileButtonViewToFalse();
 	}
 
 	render() {
-		const { contact, contactAddresses, addAddressDisplay, sendCardDisplay } = this.state;
+		const {
+			contact,
+			contactAddresses,
+			addAddressDisplay,
+			sendCardDisplay,
+		} = this.state;
 		return (
 			<>
 				<Header></Header>
 				<div className="ContactProfile">
-					
 					<div className="ContactProfile_AddressBar">
-					<AddressBar
-						handleAddAddressButtonClicked={this.handleAddAddressButtonClicked}
-						handleSendCardButtonClicked={this.handleSendCardButtonClicked}
-						contactAddresses={contactAddresses}
-					/>
+						<AddressBar
+							handleAddAddressButtonClicked={this.handleAddAddressButtonClicked}
+							handleSendCardButtonClicked={this.handleSendCardButtonClicked}
+							contactAddresses={contactAddresses}
+						/>
 					</div>
 
-						{contact !== null ? (
+					{contact !== null ? (
 						<div className="Profile_Contact_Item">
-						<ContactItem
-						contact={contact}
-						picture={contact.picture}
-						id={contact.id}
-						fullname={contact.fullname}
-						phone_number={contact.phone_number}
-						reDirect={this.reDirect}
-						/> 
+							<ContactItem
+								contact={contact}
+								picture={contact.picture}
+								id={contact.id}
+								fullname={contact.fullname}
+								phone_number={contact.phone_number}
+								reDirect={this.reDirect}
+							/>
 						</div>
-						) : ""}
+					) : (
+						""
+					)}
 
-						{addAddressDisplay !== false ? (
+					{addAddressDisplay !== false ? (
 						<div className="ContactProfile_AddAddress">
-						<AddNewAddress 
-							contact={contact} 
-							addNewAddress={this.addNewAddress} 
-							handleAddAddressClickCancel={this.handleAddAddressClickCancel}	
-						/>
+							<AddNewAddress
+								contact={contact}
+								addNewAddress={this.addNewAddress}
+								handleAddAddressClickCancel={this.handleAddAddressClickCancel}
+							/>
 						</div>
-						) : ""}
-						
-						
-						{sendCardDisplay !== false ? (
+					) : (
+						""
+					)}
+
+					{sendCardDisplay !== false ? (
 						<div className="ContactProfile_SendCard">
-						<SendCard
-							contact={contact}
-							contactAddresses={contactAddresses}
-							addTimelinePost={this.addTimelinePost}
-							handleSendCardClickCancel={this.handleSendCardClickCancel}
-						/>
+							<SendCard
+								contact={contact}
+								contactAddresses={contactAddresses}
+								addTimelinePost={this.addTimelinePost}
+								handleSendCardClickCancel={this.handleSendCardClickCancel}
+							/>
 						</div>
-						): ""}
+					) : (
+						""
+					)}
 
-
-						{contactAddresses.length !== 0 ? (
-							<div className="ContactProfile_AddressList">
+					{contactAddresses.length !== 0 ? (
+						<div className="ContactProfile_AddressList">
 							<AddressList
 								contactAddresses={contactAddresses}
 								contact={contact}
 								deleteAddress={this.deleteAddress}
 							/>
-							</div>
-						) : (
-							""
-						)}
-
-
+						</div>
+					) : (
+						""
+					)}
 				</div>
-					<div className="Profile_Footer">
-					</div>
-					<Footer></Footer>
+				<div className="Profile_Footer"></div>
+				<Footer></Footer>
 			</>
 		);
 	}

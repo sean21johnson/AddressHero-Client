@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import Timeline from './Timeline';
+import Timeline from "./Timeline";
 
 it("renders without crashing", () => {
 	const div = document.createElement("div");

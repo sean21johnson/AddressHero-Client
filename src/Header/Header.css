@@ -20,7 +20,8 @@
 	text-shadow: 1px 1px ghostwhite;
 }
 
-.timeline_logo, .address_logo {
+.timeline_logo,
+.address_logo {
 	font-size: 25px;
 	color: rgb(255, 86, 86);
 	background-color: ghostwhite;
@@ -42,8 +43,10 @@
 	display: flex;
 }
 
-
-.login_button, .logout_button, .join_button, .about_button {
+.login_button,
+.logout_button,
+.join_button,
+.about_button {
 	background-color: azure;
 	font-size: 12px;
 	border-radius: 5px;
@@ -53,7 +56,8 @@
 	border: 1px solid silver;
 }
 
-.login_button, .about_button {
+.login_button,
+.about_button {
 	margin-right: 10px;
 }
 
@@ -65,8 +69,6 @@
 .join_button {
 	margin-right: 2px;
 }
-
-
 
 @media all and (min-width: 700px) {
 	.hero_home_link {

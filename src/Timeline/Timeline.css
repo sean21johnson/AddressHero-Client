@@ -1,33 +1,31 @@
 h3.TimelineList_Header {
-    font-style:italic;
-    font-family: arial;
-    color: navy;
-    text-shadow: 1px 1px lightcoral;
-    letter-spacing: 1.5px;
-    text-align: center;
-    margin-top: 25px;
+	font-style: italic;
+	font-family: arial;
+	color: navy;
+	text-shadow: 1px 1px lightcoral;
+	letter-spacing: 1.5px;
+	text-align: center;
+	margin-top: 25px;
 }
 
 ul.TimelineList_List {
-    padding-left: 10px;
+	padding-left: 10px;
 }
 
 @media all and (min-width: 1400px) {
-    h3.TimelineList_Header {
-        font-size: 30px;
-    }
+	h3.TimelineList_Header {
+		font-size: 30px;
+	}
 
-    .TimelineList {
-        width: 40%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+	.TimelineList {
+		width: 40%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media all and (min-width: 700px) and (max-width: 1400px) {
-    .TimelineList {
-        width: 50%;
-    }
+	.TimelineList {
+		width: 50%;
+	}
 }
-
-

@@ -1,53 +1,52 @@
-import React, { Component } from 'react';
-import Header from './../Header/Header';
-import Footer from './../Footer/Footer';
-import config from './../config';
-import './Register.css';
-import ApiContext from '../ApiContext';
+import React, { Component } from "react";
+import Header from "./../Header/Header";
+import Footer from "./../Footer/Footer";
+import config from "./../config";
+import "./Register.css";
+import ApiContext from "../ApiContext";
 
 class Register extends Component {
-    state = {
-        error: ""
-    }
+	state = {
+		error: "",
+	};
 
 	static contextType = ApiContext;
 
 	handleClickCancel = () => {
-		this.props.history.push('/');
-	  }
+		this.props.history.push("/");
+	};
 
-    handleRegisterSubmit = (event) => {
-        event.preventDefault();
-        const { first_name, last_name, email, username, password } = event.target;
-        const newUser = {
-            first_name: first_name.value,
-            last_name: last_name.value,
-            email: email.value,
-            username: username.value,
-            password: password.value
-        }
-        fetch(`${config.HERO_API_ENDPOINT}/api/users`, {
-            method: "POST",
-            body: JSON.stringify(newUser),
-            headers: {
-                "content-type": "application/json"
-            }
-        })
-        .then((response) => {
-            if (!response.ok) {
-                return response.json().then((e) => Promise.reject(e))
-            }
-        })
-        .then((user) => {
-            this.props.history.push("/login")
-        })
-        .catch((e) => {
-            this.setState({
-                error: e
-            })
-        })
-
-    }
+	handleRegisterSubmit = (event) => {
+		event.preventDefault();
+		const { first_name, last_name, email, username, password } = event.target;
+		const newUser = {
+			first_name: first_name.value,
+			last_name: last_name.value,
+			email: email.value,
+			username: username.value,
+			password: password.value,
+		};
+		fetch(`${config.HERO_API_ENDPOINT}/api/users`, {
+			method: "POST",
+			body: JSON.stringify(newUser),
+			headers: {
+				"content-type": "application/json",
+			},
+		})
+			.then((response) => {
+				if (!response.ok) {
+					return response.json().then((e) => Promise.reject(e));
+				}
+			})
+			.then((user) => {
+				this.props.history.push("/login");
+			})
+			.catch((e) => {
+				this.setState({
+					error: e,
+				});
+			});
+	};
 
 	render() {
 		return (
@@ -84,13 +83,25 @@ class Register extends Component {
 							<label className="Email_Class" htmlFor="email">
 								Email:
 							</label>
-							<input className="Register_Input" type="text" name="email" id="email" required></input>
+							<input
+								className="Register_Input"
+								type="text"
+								name="email"
+								id="email"
+								required
+							></input>
 						</div>
 						<div className="Username_Div">
 							<label className="Username_Class" htmlFor="username">
 								Username:
 							</label>
-							<input className="Register_Input" type="text" name="username" id="username" required></input>
+							<input
+								className="Register_Input"
+								type="text"
+								name="username"
+								id="username"
+								required
+							></input>
 						</div>
 						<div className="Password_Div">
 							<label className="Password_Class" htmlFor="password">
@@ -128,11 +139,11 @@ class Register extends Component {
 					)}
 				</div>
 				<div className="Register_Footer">
-				<Footer></Footer>
+					<Footer></Footer>
 				</div>
 			</>
 		);
 	}
 }
- 
+
 export default Register;

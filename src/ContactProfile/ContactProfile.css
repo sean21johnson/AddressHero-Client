@@ -1,36 +1,36 @@
 .Profile_Contact_Item {
-   margin-left: 20px;
-   margin-top: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
 }
 
 @media all and (min-width: 700px) {
-   .ContactProfile {
-      width: 40%;
-      margin-left: auto;
-      margin-right: auto;
-   }
+	.ContactProfile {
+		width: 40%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-   .ContactProfile_AddressBar {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-   }
+	.ContactProfile_AddressBar {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-   .ContactProfile_AddAddress {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-   }
+	.ContactProfile_AddAddress {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-   .ContactProfile_SendCard {
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-   }
+	.ContactProfile_SendCard {
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-   .ContactProfile_AddressList {
-      width: 70%;
-      margin-left: auto;
-      margin-right: auto;
-   }
+	.ContactProfile_AddressList {
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

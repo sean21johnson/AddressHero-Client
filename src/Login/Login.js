@@ -1,57 +1,57 @@
-import React, { Component } from 'react';
-import ApiContext from '../ApiContext';
-import './Login.css';
-import config from './../config';
-import TokenService from './../services/TokenServices';
-import Header from './../Header/Header';
-import Footer from './../Footer/Footer';
+import React, { Component } from "react";
+import ApiContext from "../ApiContext";
+import "./Login.css";
+import config from "./../config";
+import TokenService from "./../services/TokenServices";
+import Header from "./../Header/Header";
+import Footer from "./../Footer/Footer";
 
 class Login extends Component {
-    state = {
-        error: ""
-    }
+	state = {
+		error: "",
+	};
 
-    static contextType = ApiContext;
+	static contextType = ApiContext;
 
-    handleClickCancel = () => {
-        this.props.history.push('/')
-    }
+	handleClickCancel = () => {
+		this.props.history.push("/");
+	};
 
-    handleLoginSubmit = (event) => {
-        event.preventDefault();
-        const { login_username, login_password } = event.target;
-        const loginAttempt = {
-            username: login_username.value,
-            password: login_password.value
-        }
+	handleLoginSubmit = (event) => {
+		event.preventDefault();
+		const { login_username, login_password } = event.target;
+		const loginAttempt = {
+			username: login_username.value,
+			password: login_password.value,
+		};
 
-        fetch(`${config.HERO_API_ENDPOINT}/api/login`, {
-            method: "POST",
-            body: JSON.stringify(loginAttempt),
-            headers: {
-                "content-type": "application/json"
-            }
-        })
-        .then((response) => {
-            if (!response.ok) {
-                return response.json().then((e) => Promise.reject(e));
-            }
-			return response.json();
-        })
-        .then((confirmedUser) => {
-            TokenService.saveAuthToken(confirmedUser.authToken);
-            this.props.history.push('/contacts')
-            this.context.getAllContacts();
-        })
-        .catch((e) => {
-            this.setState({
-                error: e
-            })
-        })
-    }
+		fetch(`${config.HERO_API_ENDPOINT}/api/login`, {
+			method: "POST",
+			body: JSON.stringify(loginAttempt),
+			headers: {
+				"content-type": "application/json",
+			},
+		})
+			.then((response) => {
+				if (!response.ok) {
+					return response.json().then((e) => Promise.reject(e));
+				}
+				return response.json();
+			})
+			.then((confirmedUser) => {
+				TokenService.saveAuthToken(confirmedUser.authToken);
+				this.props.history.push("/contacts");
+				this.context.getAllContacts();
+			})
+			.catch((e) => {
+				this.setState({
+					error: e,
+				});
+			});
+	};
 
-    render() { 
-        return ( 
+	render() {
+		return (
 			<>
 				<Header></Header>
 				<div className="Login">
@@ -105,11 +105,11 @@ class Login extends Component {
 					)}
 				</div>
 				<div className="Login_Footer">
-				<Footer></Footer>
+					<Footer></Footer>
 				</div>
 			</>
-         );
-    }
+		);
+	}
 }
- 
+
 export default Login;

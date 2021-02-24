@@ -1,28 +1,28 @@
 .ContactList_Header {
-    text-align: center;
-    font-size: 25px;
-    font-family: arial;
-    color: navy;
-    text-shadow: 1px 1px lightcoral;
+	text-align: center;
+	font-size: 25px;
+	font-family: arial;
+	color: navy;
+	text-shadow: 1px 1px lightcoral;
 }
 
 .ContactList {
-    margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 
 @media all and (min-width: 700px) {
-    .Contact_Container {
-        display: flex;
-        flex-direction: column;
-    }
+	.Contact_Container {
+		display: flex;
+		flex-direction: column;
+	}
 
-    .ContactList {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+	.ContactList {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-    .ContactList_Header {
-        font-size: 35px;
-    }
+	.ContactList_Header {
+		font-size: 35px;
+	}
 }

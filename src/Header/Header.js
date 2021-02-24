@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faListAlt, faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import ApiContext from '../ApiContext';
-import './Header.css';
-import TokenService from './../services/TokenServices';
+import ApiContext from "../ApiContext";
+import "./Header.css";
+import TokenService from "./../services/TokenServices";
 
 class Header extends Component {
-    static contextType = ApiContext;
+	static contextType = ApiContext;
 
-    handleHeroClick = () => {
-        this.context.getAllContacts();
-    }
+	handleHeroClick = () => {
+		this.context.getAllContacts();
+	};
 
 	handleTimelineClick = () => {
-		this.context.getTimeline()
-	}
+		this.context.getTimeline();
+	};
 
-    handleLogoutClick = () => {
-        TokenService.clearAuthToken();
-    }
+	handleLogoutClick = () => {
+		TokenService.clearAuthToken();
+	};
 
-    renderLoginLink() {
-        return (
+	renderLoginLink() {
+		return (
 			<header className="header">
 				<nav className="nav_bar">
 					<div className="nav_left">
@@ -36,14 +36,16 @@ class Header extends Component {
 							</Link>
 						</div>
 						<div className="nav_title">
-							<p><strong>AddressHero</strong></p>
+							<p>
+								<strong>AddressHero</strong>
+							</p>
 						</div>
 						<div className="nav_timeline_logo">
-							<Link 
-								className="timeline_logo" 
+							<Link
+								className="timeline_logo"
 								to="/timeline"
 								onClick={this.handleTimelineClick}
-								>
+							>
 								<FontAwesomeIcon icon={faListAlt} />
 							</Link>
 						</div>
@@ -62,13 +64,13 @@ class Header extends Component {
 				</nav>
 			</header>
 		);
-    }
+	}
 
-    renderLogoutLink() {
-        return (
+	renderLogoutLink() {
+		return (
 			<header className="header">
 				<nav className="nav_bar">
-				<div className="nav_left">
+					<div className="nav_left">
 						<div className="nav_logo">
 							<Link
 								className="address_logo"
@@ -79,14 +81,16 @@ class Header extends Component {
 							</Link>
 						</div>
 						<div className="nav_title">
-							<p><strong>AddressHero</strong></p>
+							<p>
+								<strong>AddressHero</strong>
+							</p>
 						</div>
 						<div className="nav_timeline_logo">
-							<Link 
-								className="timeline_logo" 
+							<Link
+								className="timeline_logo"
 								to="/timeline"
 								onClick={this.handleTimelineClick}
-								>
+							>
 								<FontAwesomeIcon icon={faListAlt} />
 							</Link>
 						</div>
@@ -107,17 +111,17 @@ class Header extends Component {
 				</nav>
 			</header>
 		);
-    }
+	}
 
-    render() { 
-        return ( 
-            <>
-            {TokenService.hasAuthToken()
-                ? this.renderLogoutLink()
-                : this.renderLoginLink()}
-            </>
-         );
-    }
+	render() {
+		return (
+			<>
+				{TokenService.hasAuthToken()
+					? this.renderLogoutLink()
+					: this.renderLoginLink()}
+			</>
+		);
+	}
 }
- 
+
 export default Header;

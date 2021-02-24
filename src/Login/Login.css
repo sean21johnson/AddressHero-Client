@@ -1,43 +1,45 @@
 .Login_Header {
-    font-style:italic;
-    font-family: arial;
-    color: navy;
-    text-shadow: 1px 1px lightcoral;
-    letter-spacing: 1.5px;
-    text-align: center;
-    margin-top: 25px;
+	font-style: italic;
+	font-family: arial;
+	color: navy;
+	text-shadow: 1px 1px lightcoral;
+	letter-spacing: 1.5px;
+	text-align: center;
+	margin-top: 25px;
 }
 
-.Login_Username_Div, .Login_Password_Div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 35px;
+.Login_Username_Div,
+.Login_Password_Div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 35px;
 }
 
 .Login_Input {
-    margin-right: 25px;
+	margin-right: 25px;
 }
 
 .Login_Form {
-    margin-top: 45px;
-    margin-bottom: 45px;
+	margin-top: 45px;
+	margin-bottom: 45px;
 }
 
 .Login_Buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    margin-top: 45px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+	margin-top: 45px;
 }
 
 .Login {
-    margin-top: 40px;
+	margin-top: 40px;
 }
 
-.Login_Cancel_Button, .Login_Submit_Button {
-    background-color: azure;
+.Login_Cancel_Button,
+.Login_Submit_Button {
+	background-color: azure;
 	font-size: 14px;
 	border-radius: 5px;
 	font-family: arial;
@@ -46,26 +48,29 @@
 	border: 1px solid silver;
 }
 
-.Login_Password_Class, .Login_Username_Class {
-    margin-left: 50px;
-    font-size: 18px;
-    font-family: courier;
-    font-weight: bold;
+.Login_Password_Class,
+.Login_Username_Class {
+	margin-left: 50px;
+	font-size: 18px;
+	font-family: courier;
+	font-weight: bold;
 }
 
 @media all and (min-width: 700px) {
-    .Login {
-        width: 30%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 25px;
-    }
+	.Login {
+		width: 30%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 25px;
+	}
 
-    .Login_Password_Class, .Login_Username_Class {
-        font-size: 20px;
-    }
+	.Login_Password_Class,
+	.Login_Username_Class {
+		font-size: 20px;
+	}
 
-    .Login_Cancel_Button, .Login_Submit_Button {
-        font-size: 20px;
-    }
+	.Login_Cancel_Button,
+	.Login_Submit_Button {
+		font-size: 20px;
+	}
 }
