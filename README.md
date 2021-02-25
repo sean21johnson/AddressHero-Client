@@ -17,7 +17,7 @@
 New / any user goes to landing page:
 
     -> views description of site
-    -> views steps for getting
+    -> views steps for getting started
     -> views details to use demo account
 
 New user registers for an account:
@@ -38,20 +38,21 @@ User adds contact:
 User edits contact:
 
     -> user clicks on 'Edit' button
-    -> user enters full name, phone number, picture of contacts
+    -> user enters full name, phone number, picture of contact
 
 User navigates contacts using search bar:
 
     -> user searches for the name of a contact
-    -> only names matching that search term will be displayed on the address book page
+    -> only contact names matching that search term will be displayed on the address book page
 
 User views contact's profile page
 
+    -> user clicks on 'View Profile' button for a contact in the contact list
     -> user clicks on 'Add New Address' button
     -> user enters street, city, state, zip code, google maps link
     -> user repeats process to create multiple addresses for the contact if necessary
     -> user clicks on 'Send Card' button after adding at least one address
-    -> user enters the address and card type
+    -> user enters the address and card type to send
 
 User views their Timeline page
 
@@ -118,7 +119,7 @@ This client-side application was created with:
 ➖➖➖*Contact Search/Add Contact Nav Bar*   
 ➖➖➖*Individual Contact Items*   
 ➖➖➖➖*Add New Contact Form*   
-➖➖➖➖*Edit Individual Contact*    
+➖➖➖➖*Edit Individual Contact Form*    
 
 ➖➖**Contact Profile Page**    
 ➖➖➖*Add New Address/Send Card Nav Bar*    
