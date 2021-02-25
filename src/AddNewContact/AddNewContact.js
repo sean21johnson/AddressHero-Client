@@ -41,6 +41,7 @@ class AddNewContact extends Component {
 							type="text"
 							name="contact_picture"
 							id="contact_picture"
+							placeholder="*.jpg URL Image Type*"
 							required
 						></input>
 					</div>
