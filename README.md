@@ -114,22 +114,22 @@ This client-side application was created with:
 ➖➖**Login Page**  
 ➖➖➖*Login Form*  
 
-➖➖**Contact List Page** 
-➖➖➖*Contact Search/Add Contact Nav Bar*  
-➖➖➖*Individual Contact Items*  
-➖➖➖➖*Add New Contact Form* 
-➖➖➖➖*Edit Individual Contact*  
+➖➖**Contact List Page**   
+➖➖➖*Contact Search/Add Contact Nav Bar*   
+➖➖➖*Individual Contact Items*   
+➖➖➖➖*Add New Contact Form*   
+➖➖➖➖*Edit Individual Contact*    
 
-➖➖**Contact Profile Page**  
-➖➖➖*Add New Address/Send Card Nav Bar*  
-➖➖➖*Individual Contact Item*   
-➖➖➖➖*Add New Address Form*  
-➖➖➖➖*Send Card Form*  
+➖➖**Contact Profile Page**    
+➖➖➖*Add New Address/Send Card Nav Bar*    
+➖➖➖*Individual Contact Item*     
+➖➖➖➖*Add New Address Form*    
+➖➖➖➖*Send Card Form*    
 
-➖➖**Timelin Page**
-➖➖➖*Individual Timeline Items*  
+➖➖**Timeline Page**    
+➖➖➖*Individual Timeline Items*    
 
-➖**Footer🔻** 
+➖**Footer🔻**   
 
 ---
 
