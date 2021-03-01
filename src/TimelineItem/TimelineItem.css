@@ -32,7 +32,6 @@ img.Timeline_Image {
 	font-style: italic;
 	padding: 2px;
 	font-size: 11px;
-	/* border-top: 1px dotted navy; */
 	padding-top: 3px;
 	margin-right: 5px;
 }
@@ -82,5 +81,10 @@ img.Timeline_Image {
 
 	.Timeline_Item_ListItem {
 		margin-bottom: 15px;
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
 	}
+
+
 }

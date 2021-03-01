@@ -4,17 +4,21 @@
 	margin-top: 20px;
 	display: flex;
 	justify-content: center;
-	background-color: lightcoral;
+	background: linear-gradient(40deg, rgb(255, 200, 151), orange);
 	padding: 10px;
 	margin-left: 25px;
 	margin-right: 25px;
 	border-radius: 5px;
-	border: 2px groove lightslategrey;
+	border: 3px solid white;
+	box-shadow: 1px 1px 10px 1px grey;
 }
 
 input.Search_Contacts {
 	margin-right: 25px;
 	font-family: arial;
+	border-radius: 5px;
+	border: 1px solid white;
+	box-shadow: 1px 1px 5px 1px navy;
 }
 
 .ContactBar_Button {
@@ -24,7 +28,8 @@ input.Search_Contacts {
 	font-family: arial;
 	color: rgb(255, 59, 59);
 	font-weight: bold;
-	border: 1px solid silver;
+	border: 1px solid white;
+	box-shadow: 1px 1px 5px 1px navy;
 }
 
 @media all and (min-width: 700px) {
@@ -44,5 +49,10 @@ input.Search_Contacts {
 		margin-right: 100px;
 		font-size: 20px;
 		border: 1px solid gold;
+	}
+
+	.ContactBar {
+		padding: 15px;
+		margin-top: 30px;
 	}
 }

@@ -13,3 +13,9 @@ ul.ContactList_Unordered {
 	padding-left: 0px;
 	margin-right: 20px;
 }
+
+@media all and (min-width: 700px) {
+	.ContactProfile_AddressList {
+		margin-left: 40px;
+	}
+}

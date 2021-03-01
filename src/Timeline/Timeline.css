@@ -12,20 +12,14 @@ ul.TimelineList_List {
 	padding-left: 10px;
 }
 
-@media all and (min-width: 1400px) {
-	h3.TimelineList_Header {
-		font-size: 30px;
-	}
-
+@media all and (min-width: 700px) {
 	.TimelineList {
-		width: 40%;
+		width: 1200px;
 		margin-left: auto;
 		margin-right: auto;
 	}
-}
 
-@media all and (min-width: 700px) and (max-width: 1400px) {
-	.TimelineList {
-		width: 50%;
+	h3.TimelineList_Header {
+		font-size: 30px;
 	}
 }

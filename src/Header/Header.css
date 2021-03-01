@@ -2,7 +2,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: lightblue;
+	background: linear-gradient(40deg, lightpink, rgb(0, 0, 196));
+	box-shadow: 1px 1px 10px 1px grey;
 	border: 2px solid lightslategrey;
 }
 
@@ -15,9 +16,8 @@
 	font-size: 16px;
 	margin-left: 10px;
 	margin-right: 10px;
-	color: rgb(2, 2, 145);
+	color: white;
 	font-variant-caps: petite-caps;
-	text-shadow: 1px 1px ghostwhite;
 }
 
 .timeline_logo,
@@ -82,5 +82,9 @@
 		font-size: 20px;
 		margin-left: 40px;
 		margin-right: 20px;
+	}
+
+	.nav_title {
+		font-size: 20px;
 	}
 }

@@ -222,20 +222,40 @@ class ContactProfile extends Component {
 						/>
 					</div>
 
-					{contact !== null ? (
-						<div className="Profile_Contact_Item">
-							<ContactItem
-								contact={contact}
-								picture={contact.picture}
-								id={contact.id}
-								fullname={contact.fullname}
-								phone_number={contact.phone_number}
-								reDirect={this.reDirect}
-							/>
+					{contact !== null && contactAddresses.length !== 0 ? (
+						<div className="Profile_Flex_Container">
+							<div className="Profile_Contact_Item">
+								<ContactItem
+									contact={contact}
+									picture={contact.picture}
+									id={contact.id}
+									fullname={contact.fullname}
+									phone_number={contact.phone_number}
+									reDirect={this.reDirect}
+								/>
+							</div>
+							<div className="ContactProfile_AddressList">
+								<AddressList
+									contactAddresses={contactAddresses}
+									contact={contact}
+									deleteAddress={this.deleteAddress}
+								/>
+							</div>
 						</div>
 					) : (
 						""
 					)}
+					{/* {contactAddresses.length !== 0 ? (
+						<div className="ContactProfile_AddressList">
+							<AddressList
+								contactAddresses={contactAddresses}
+								contact={contact}
+								deleteAddress={this.deleteAddress}
+							/>
+						</div>
+					) : (
+						""
+					)} */}
 
 					{addAddressDisplay !== false ? (
 						<div className="ContactProfile_AddAddress">
@@ -262,17 +282,6 @@ class ContactProfile extends Component {
 						""
 					)}
 
-					{contactAddresses.length !== 0 ? (
-						<div className="ContactProfile_AddressList">
-							<AddressList
-								contactAddresses={contactAddresses}
-								contact={contact}
-								deleteAddress={this.deleteAddress}
-							/>
-						</div>
-					) : (
-						""
-					)}
 				</div>
 				<div className="Profile_Footer"></div>
 				<Footer></Footer>

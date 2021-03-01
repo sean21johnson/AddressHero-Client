@@ -6,6 +6,7 @@ ul {
 .Contact_Image {
 	width: 100%;
 	border-radius: 10px;
+	box-shadow: 1px 1px 10px 1px lightgrey;
 }
 
 li.Contact_Items {
@@ -17,6 +18,7 @@ li.Contact_Items {
 	background-color: white;
 	border-radius: 10px;
 	margin-top: 10px;
+	box-shadow: 1px 1px 5px 1px grey;
 }
 
 .Contact_Image_Div {
@@ -39,6 +41,7 @@ li.Contact_Items {
 	color: rgb(255, 59, 59);
 	font-weight: bold;
 	border: 1px solid silver;
+	box-shadow: 1px 1px 10px 1px lightgrey;
 }
 
 .Contact_Delete_Button {
@@ -51,6 +54,7 @@ li.Contact_Items {
 	border: 1px solid silver;
 	margin-left: 20px;
 	margin-top: 15px;
+	box-shadow: 1px 1px 10px 1px lightgrey;
 }
 
 .Contact_Name_Container,
@@ -62,6 +66,7 @@ li.Contact_Items {
 	margin-top: 10px;
 	margin-left: 25px;
 	border-radius: 10px;
+	box-shadow: 1px 1px 10px 1px lightgrey;
 }
 
 .Contact_Name_Title,
@@ -98,6 +103,7 @@ li.Contact_Items {
 	font-weight: bold;
 	border: 1px solid silver;
 	margin-left: 15px;
+	box-shadow: 1px 1px 5px 1px lightgrey;
 }
 
 @media all and (min-width: 700px) {

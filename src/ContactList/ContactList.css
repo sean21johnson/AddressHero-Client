@@ -13,16 +13,21 @@
 @media all and (min-width: 700px) {
 	.Contact_Container {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.ContactList {
-		width: 50%;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	.ContactList_Header {
 		font-size: 35px;
+	}
+
+	.Contact_Items {
+		width: 500px;
 	}
 }
