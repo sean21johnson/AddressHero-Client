@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import AddressItem from "./../AddressItem/AddressItem";
 import "./AddressList.css";
 
+/*
+The AddressList component comprises all of the addresses for a given contact. It maps each of the addresses in the array of 
+addresses for that contact to the AddressItem component and renders them on the UI. 
+*/
 class AddressList extends Component {
 	render() {
 		const { contactAddresses, contact, deleteAddress } = this.props;

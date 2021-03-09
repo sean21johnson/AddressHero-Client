@@ -9,6 +9,10 @@ import AddNewContact from "./../AddNewContact/AddNewContact";
 import ContactBar from "./../ContactBar/ContactBar";
 import "./ContactList.css";
 
+/*
+The ContactList component comprises all of the contacts for a given user. It maps each of the contacts in the array of 
+contacts for that user to the ContactItem component and renders them to the UI.
+*/
 class ContactList extends Component {
 	state = {
 		addContactDisplay: false,

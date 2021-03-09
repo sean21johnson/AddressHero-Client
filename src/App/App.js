@@ -13,6 +13,9 @@ import ContactList from "./../ContactList/ContactList";
 import ContactProfile from "./../ContactProfile/ContactProfile";
 import "./App.css";
 
+/*
+The App component is the main component and its state stores all of the contacts, addresses and the timeline for a given user.
+*/
 class App extends Component {
 	state = {
 		contacts: [],

@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./AddNewAddress.css";
 
+/*
+The AddNewAddress component is a form where the user can add an address for a given contact. It needs the addNewAddress
+function sent in as a prop. When the user submits this form, the function is called and sends a post request to the server
+to post the new address in the database. Street, city, state, zip, and google maps link are all required for form submission.
+*/
 class AddNewAddress extends Component {
 	render() {
 		const { contact, addNewAddress, handleAddAddressClickCancel } = this.props;
@@ -46,7 +51,6 @@ class AddNewAddress extends Component {
 							</label>
 							<select
 								className="AddAddress_Input"
-								// className="Address_State_Dropdown"
 								name="address_state"
 								required
 							>

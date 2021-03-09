@@ -12,6 +12,13 @@ import AddressBar from "./../AddressBar/AddressBar";
 import ContactItem from "./../ContactItem/ContactItem";
 import "./ContactProfile.css";
 
+/*
+The ContactProfile component is essentially a contact's profile page. On this page, you can view all of contact's
+information (name, picture, phone #, addresses). You also have the ability to add a new address for the contact, delete
+existing addresses, and to log the event of sending a card to any of their addresses (the event will be logged on the user's
+timeline). User's also have the option to delete the contact from the profile page which sends a DELETE request to the database
+and deletes that contact (and all data associated with that contact: addresses, timeline events)
+*/
 class ContactProfile extends Component {
 	state = {
 		contact: null,
@@ -245,17 +252,6 @@ class ContactProfile extends Component {
 					) : (
 						""
 					)}
-					{/* {contactAddresses.length !== 0 ? (
-						<div className="ContactProfile_AddressList">
-							<AddressList
-								contactAddresses={contactAddresses}
-								contact={contact}
-								deleteAddress={this.deleteAddress}
-							/>
-						</div>
-					) : (
-						""
-					)} */}
 
 					{addAddressDisplay !== false ? (
 						<div className="ContactProfile_AddAddress">

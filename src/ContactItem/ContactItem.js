@@ -6,6 +6,11 @@ import config from "../config";
 import EditContact from "./../EditContact/EditContact";
 import TokenService from "./../services/TokenServices";
 
+/*
+The ContactItem component just display a given contact. It will show a picture of the contact, their name and phone #.
+There is also a button to view the contact's full profile page (Where the list of their addresses can be seen) and a button to
+edit any of the contact's information (name, phone #, picture)
+*/
 class ContactItem extends Component {
 	state = {
 		editClicked: false,

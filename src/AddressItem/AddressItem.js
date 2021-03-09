@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./AddressItem.css";
 
+/*
+The AddressItem component just displays a given address. It will show the google maps link to the address, the full address
+of the location, and a button which gives the user the option to delete the address. On click of the button, a DELETE request
+will be sent to the server to delete that specific address from the database.
+*/
 class AddressItem extends Component {
 	handleDeleteAddress = (event, id) => {
 		event.preventDefault();

@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./AddressBar.css";
 
+/*
+The AddressBar component is contains two buttons and is shown on a contact's profile page. The two buttons are to add a
+new address for that contact or to send a card to that contact. When you click on the buttons, forms
+will be displayed on the contact's page to complete either of these actions.
+*/
 class AddressBar extends Component {
 	render() {
 		const {

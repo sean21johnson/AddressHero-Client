@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./AddNewContact.css";
 
+/*
+The AddNewContact component is a form where the user can add a new contact to their list. It needs the addContact function 
+sent in as a prop. When the user submits this form, the function is called and sends a post request to the server to post a 
+new contact in the database. Name, phone number and JPG image URL link are all required for form submission.
+*/
 class AddNewContact extends Component {
 	render() {
 		const { addContact, addCancelClicked } = this.props;
