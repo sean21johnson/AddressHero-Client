@@ -124,7 +124,7 @@ class ContactList extends Component {
 
 				<section className="ContactList">
 					<ul className="ContactList_List">
-						<h3 className="ContactList_Header">Address Book</h3>
+						<h3 className="ContactList_Header">Contacts</h3>
 
 						{contacts !== undefined && (
 							<div className="Contact_Container">

@@ -1,9 +1,7 @@
 .ContactList_Header {
 	text-align: center;
 	font-size: 25px;
-	font-family: arial;
 	color: navy;
-	text-shadow: 1px 1px lightcoral;
 }
 
 .ContactList {
@@ -21,13 +19,11 @@
 	.ContactList {
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 200px;
+		padding-right: 200px
 	}
 
 	.ContactList_Header {
 		font-size: 35px;
-	}
-
-	.Contact_Items {
-		width: 500px;
 	}
 }

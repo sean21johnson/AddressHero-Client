@@ -1,6 +1,5 @@
 .AddAddress_Header {
 	font-style: italic;
-	font-family: arial;
 	color: navy;
 	text-shadow: 1px 1px lightcoral;
 	letter-spacing: 1.5px;
@@ -37,7 +36,6 @@
 .Address_Map_Class {
 	margin-left: 10px;
 	font-size: 16px;
-	font-family: courier;
 	font-weight: bold;
 }
 
@@ -58,7 +56,6 @@
 	background-color: azure;
 	font-size: 14px;
 	border-radius: 5px;
-	font-family: arial;
 	color: rgb(255, 59, 59);
 	font-weight: bold;
 	border: 1px solid silver;

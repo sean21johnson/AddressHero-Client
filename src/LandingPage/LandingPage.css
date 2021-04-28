@@ -1,27 +1,14 @@
-h1 {
-	text-align: center;
-	font-family: arial;
-	font-variant-caps: petite-caps;
-	color: black;
-	margin-top: 20px;
-	background-color: lightcoral;
-	color: white;
-	text-shadow: 1px 1px black;
-	border-radius: 5px;
-	margin-left: 70px;
-	margin-right: 70px;
-	border: 1px groove gold;
-	font-size: 35px;
+.LandingPage {
+	min-width: 400px;
 }
 
 h2.LandingPage_Description_Header,
 h2.LandingPage_GettingStarted_Header,
 h2.LandingPage_Demo_Header {
 	text-align: center;
-	font-family: arial;
 	font-style: italic;
 	color: navy;
-	text-shadow: 1px 1px lightcoral;
+	text-decoration: underline
 }
 
 p.LandingPage_Description_Paragraph,
@@ -31,13 +18,9 @@ p.LandingPage_Demo_Password {
 	margin-left: 15px;
 	margin-right: 10px;
 	text-indent: 15px;
-	font-family: arial;
 	line-height: 1.4;
 }
 
-section.LandingPage_GettingStarted {
-	font-family: arial;
-}
 
 li.LandingPage_GettingStarted_Item {
 	line-height: 2;
@@ -49,7 +32,6 @@ table.LandingPage_Demo_Table {
 	border: 1px black solid;
 	margin-bottom: 50px;
 	background-color: ghostwhite;
-	font-family: courier;
 	margin-top: 25px;
 }
 
@@ -77,26 +59,11 @@ td.Login_Account {
 }
 
 @media all and (min-width: 700px) {
-	h1 {
-		width: 50%;
-		margin-left: auto;
-		margin-right: auto;
-		font-size: 50px;
-	}
 
 	.LandingPage {
-		width: 60%;
+		width: 800px;
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	.LandingPage_Description,
-	.LandingPage_Demo,
-	.LandingPage_GettingStarted {
-		width: 70%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 40px;
 	}
 
 	p.LandingPage_Description_Paragraph,

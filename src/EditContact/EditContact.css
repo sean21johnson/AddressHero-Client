@@ -4,7 +4,6 @@
 
 .EditContact_Header {
 	font-style: italic;
-	font-family: arial;
 	color: navy;
 	text-shadow: 1px 1px lightcoral;
 	letter-spacing: 1.5px;
@@ -24,7 +23,6 @@
 .EditContact_Label {
 	margin-left: 20px;
 	font-size: 15px;
-	font-family: courier;
 	font-weight: bold;
 	margin-top: 3px;
 }
@@ -41,7 +39,6 @@
 	background-color: white;
 	font-size: 12px;
 	border-radius: 5px;
-	font-family: arial;
 	color: rgb(255, 59, 59);
 	font-weight: bold;
 	border: 1px solid silver;

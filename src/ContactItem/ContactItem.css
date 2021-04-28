@@ -1,3 +1,10 @@
+.ContactItem_Mini {
+	min-width: 400px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 ul {
 	list-style-type: none;
 	padding-left: 20px;
@@ -37,7 +44,6 @@ li.Contact_Items {
 	background-color: azure;
 	font-size: 10px;
 	border-radius: 5px;
-	font-family: arial;
 	color: rgb(255, 59, 59);
 	font-weight: bold;
 	border: 1px solid silver;
@@ -48,7 +54,6 @@ li.Contact_Items {
 	background-color: rgb(255, 59, 59);
 	font-size: 14px;
 	border-radius: 5px;
-	font-family: arial;
 	color: azure;
 	font-weight: bold;
 	border: 1px solid silver;
@@ -74,12 +79,10 @@ li.Contact_Items {
 	padding-top: 5px;
 	padding-bottom: 10px;
 	font-style: italic;
-	font-family: courier;
 }
 
 .Contact_Name_Name,
 .Contact_Name_TheNumber {
-	font-family: arial;
 	padding-bottom: 5px;
 	color: navy;
 }
@@ -98,7 +101,6 @@ li.Contact_Items {
 	background-color: azure;
 	font-size: 10px;
 	border-radius: 5px;
-	font-family: arial;
 	color: rgb(255, 59, 59);
 	font-weight: bold;
 	border: 1px solid silver;
@@ -109,22 +111,6 @@ li.Contact_Items {
 @media all and (min-width: 700px) {
 	.Contact_Profile_Button,
 	.Edit_Contact_Button {
-		font-size: 20px;
-	}
-
-	.Contact_Details_Div {
-		font-size: 20px;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-	}
-
-	.Contact_Name_Container,
-	.Contact_Name_Number {
-		padding: 10px;
-	}
-
-	.Contact_Delete_Button {
-		font-size: 18px;
+		font-size: 12px;
 	}
 }

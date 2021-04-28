@@ -6,49 +6,44 @@
 	justify-content: center;
 	background: linear-gradient(40deg, rgb(255, 200, 151), orange);
 	padding: 10px;
-	margin-left: 25px;
-	margin-right: 25px;
+	margin-left: auto;
+	margin-right: auto;
 	border-radius: 5px;
-	border: 3px solid white;
-	box-shadow: 1px 1px 10px 1px grey;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+	width: 400px;
 }
 
 input.Search_Contacts {
 	margin-right: 25px;
-	font-family: arial;
 	border-radius: 5px;
 	border: 1px solid white;
-	box-shadow: 1px 1px 5px 1px navy;
+	/* box-shadow: 1px 1px 5px 1px navy; */
 }
 
 .ContactBar_Button {
 	background-color: azure;
 	font-size: 12px;
 	border-radius: 5px;
-	font-family: arial;
 	color: rgb(255, 59, 59);
 	font-weight: bold;
 	border: 1px solid white;
-	box-shadow: 1px 1px 5px 1px navy;
+	/* box-shadow: 1px 1px 5px 1px navy; */
 }
 
 @media all and (min-width: 700px) {
 	.ContactBar {
-		width: 40%;
-		margin-left: auto;
-		margin-right: auto;
+		width: 550px;
 	}
 
 	.ContactBar_Button {
-		font-size: 20px;
+		font-size: 16px;
 		border: 1px solid gold;
 		padding: 5px;
+		cursor: pointer;
 	}
 
 	input.Search_Contacts {
-		margin-right: 100px;
-		font-size: 20px;
-		border: 1px solid gold;
+		font-size: 16px;
 	}
 
 	.ContactBar {

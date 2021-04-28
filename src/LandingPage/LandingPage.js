@@ -10,7 +10,6 @@ class LandingPage extends Component {
 			<>
 				<Header></Header>
 				<div className="LandingPage">
-					<h1>Address Hero</h1>
 					<div className="LandingPage_Sections">
 						<section className="LandingPage_Description">
 							<h2 className="LandingPage_Description_Header">
@@ -71,7 +70,7 @@ class LandingPage extends Component {
 							<table className="LandingPage_Demo_Table">
 								<tbody>
 									<tr>
-										<th className="Demo_Table_Header Login">Login</th>
+										<th className="Demo_Table_Header">Login</th>
 										<th className="Demo_Table_Header Password">Password</th>
 									</tr>
 									<tr>

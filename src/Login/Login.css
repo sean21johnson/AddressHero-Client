@@ -1,6 +1,5 @@
 .Login_Header {
 	font-style: italic;
-	font-family: arial;
 	color: navy;
 	text-shadow: 1px 1px lightcoral;
 	letter-spacing: 1.5px;
@@ -35,6 +34,10 @@
 
 .Login {
 	margin-top: 40px;
+	width: 450px;
+	padding-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .Login_Cancel_Button,
@@ -42,7 +45,6 @@
 	background-color: azure;
 	font-size: 14px;
 	border-radius: 5px;
-	font-family: arial;
 	color: rgb(255, 59, 59);
 	font-weight: bold;
 	border: 1px solid silver;
@@ -52,13 +54,11 @@
 .Login_Username_Class {
 	margin-left: 50px;
 	font-size: 18px;
-	font-family: courier;
 	font-weight: bold;
 }
 
 @media all and (min-width: 700px) {
 	.Login {
-		width: 30%;
 		margin-left: auto;
 		margin-right: auto;
 		font-size: 25px;

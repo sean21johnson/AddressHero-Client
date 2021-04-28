@@ -1,7 +1,7 @@
 .footer {
 	background-color: rgb(70, 70, 255);
-	border: 2px solid lightslategrey;
 	margin-top: 25px;
+	padding: 5px;
 }
 
 .footer_brand-container {
@@ -9,7 +9,6 @@
 }
 
 .copyright-text {
-	font-family: system-ui;
 	font-size: 13px;
 }
 

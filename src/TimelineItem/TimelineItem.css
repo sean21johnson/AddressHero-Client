@@ -24,7 +24,6 @@ img.Timeline_Image {
 	background-color: rgb(255, 241, 241);
 	padding-bottom: 3px;
 	padding-top: 3px;
-	font-family: arial;
 	border-radius: 5px;
 }
 
@@ -46,14 +45,12 @@ img.Timeline_Image {
 }
 
 .Timeline_Details_DateName {
-	font-family: courier;
 	font-size: 11px;
 	padding-bottom: 3px;
 }
 
 .Extra_Bold {
 	font-size: 12px;
-	font-family: "Times New Roman", Times, serif;
 }
 
 @media all and (min-width: 1000px) {
