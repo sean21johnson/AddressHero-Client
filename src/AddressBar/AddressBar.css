@@ -1,15 +1,15 @@
 .AddressBar {
 	margin-top: 20px;
 	display: flex;
-	display: flex;
 	justify-content: center;
 	background: linear-gradient(40deg, rgb(255, 200, 151), orange);
 	padding: 8px;
-	margin-left: 25px;
-	margin-right: 25px;
+	margin-left: auto;
+	margin-right: auto;
 	border-radius: 5px;
-	border: 2px solid white;
-	box-shadow: 1px 1px 10px 1px lightgrey;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+	width: 360px;
+	margin-bottom: 20px;
 }
 
 .AddressBar_NewContact_Button,
@@ -20,7 +20,7 @@
 	color: rgb(255, 59, 59);
 	font-weight: bold;
 	border: 1px solid silver;
-	box-shadow: 1px 1px 5px 1px grey;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
 .AddressBar_SendCard_Button {

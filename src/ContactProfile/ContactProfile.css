@@ -1,6 +1,6 @@
 .Profile_Contact_Item {
-	margin-left: 20px;
-	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media all and (min-width: 700px) {

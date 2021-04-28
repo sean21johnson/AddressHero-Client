@@ -4,6 +4,10 @@
 	color: navy;
 }
 
+.ContactList_List {
+	padding-left: 0px;
+}
+
 .ContactList {
 	margin-bottom: 40px;
 }

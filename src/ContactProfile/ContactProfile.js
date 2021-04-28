@@ -232,6 +232,34 @@ class ContactProfile extends Component {
 					{contact !== null && contactAddresses.length !== 0 ? (
 						<div className="Profile_Flex_Container">
 							<div className="Profile_Contact_Item">
+								{addAddressDisplay !== false ? (
+									<div className="ContactProfile_AddAddress">
+										<AddNewAddress
+											contact={contact}
+											addNewAddress={this.addNewAddress}
+											handleAddAddressClickCancel={
+												this.handleAddAddressClickCancel
+											}
+										/>
+									</div>
+								) : (
+									""
+								)}
+
+								{sendCardDisplay !== false ? (
+									<div className="ContactProfile_SendCard">
+										<SendCard
+											contact={contact}
+											contactAddresses={contactAddresses}
+											addTimelinePost={this.addTimelinePost}
+											handleSendCardClickCancel={this.handleSendCardClickCancel}
+										/>
+									</div>
+								) : (
+									""
+								)}
+
+
 								<ContactItem
 									contact={contact}
 									picture={contact.picture}
@@ -252,32 +280,6 @@ class ContactProfile extends Component {
 					) : (
 						""
 					)}
-
-					{addAddressDisplay !== false ? (
-						<div className="ContactProfile_AddAddress">
-							<AddNewAddress
-								contact={contact}
-								addNewAddress={this.addNewAddress}
-								handleAddAddressClickCancel={this.handleAddAddressClickCancel}
-							/>
-						</div>
-					) : (
-						""
-					)}
-
-					{sendCardDisplay !== false ? (
-						<div className="ContactProfile_SendCard">
-							<SendCard
-								contact={contact}
-								contactAddresses={contactAddresses}
-								addTimelinePost={this.addTimelinePost}
-								handleSendCardClickCancel={this.handleSendCardClickCancel}
-							/>
-						</div>
-					) : (
-						""
-					)}
-
 				</div>
 				<div className="Profile_Footer"></div>
 				<Footer></Footer>

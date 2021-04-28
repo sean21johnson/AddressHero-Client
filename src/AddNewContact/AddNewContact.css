@@ -1,9 +1,13 @@
 .AddNewContact {
 	text-align: center;
-	border: 2px dotted lightblue;
+	border: 1px solid lightblue;
 	margin: 20px;
 	background-color: white;
 	border-radius: 10px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
 .NewContact_Container {
@@ -43,27 +47,6 @@ label.NewContact_Label {
 .NewContact_Header {
 	font-style: italic;
 	color: navy;
-	text-shadow: 1px 1px lightcoral;
 	letter-spacing: 1.5px;
 }
 
-@media all and (min-width: 700px) {
-	.AddNewContact {
-		width: 45%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	label.NewContact_Label {
-		margin-left: 100px;
-		font-size: 22px;
-	}
-
-	.NewContact_Input {
-		margin-right: 100px;
-	}
-
-	.NewContact_Button {
-		font-size: 20px;
-	}
-}

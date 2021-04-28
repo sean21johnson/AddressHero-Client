@@ -1,11 +1,11 @@
 .Table_Header {
 	font-style: italic;
-	color: lightcoral;
-	text-shadow: 1px 1px navy;
+	color: navy;
 	letter-spacing: 1.5px;
 	text-align: center;
 	margin-top: 25px;
 	margin-bottom: 10px;
+	width: 380px;
 }
 
 ul.ContactList_Unordered {
@@ -16,5 +16,9 @@ ul.ContactList_Unordered {
 @media all and (min-width: 700px) {
 	.ContactProfile_AddressList {
 		margin-left: 40px;
+	}
+
+	.Table_Header {
+		font-size: 22px;
 	}
 }

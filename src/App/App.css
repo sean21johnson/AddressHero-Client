@@ -18,6 +18,10 @@ button:active {
 	opacity: 0.7;
 }
 
+button {
+	cursor: pointer;
+}
+
 
 button:hover {
 	box-shadow: 1px 1px 5px 1px rgb(163, 163, 163);

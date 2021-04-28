@@ -1,10 +1,9 @@
 .AddAddress_Header {
-	font-style: italic;
 	color: navy;
-	text-shadow: 1px 1px lightcoral;
 	letter-spacing: 1.5px;
 	text-align: center;
 	margin-top: 10px;
+	font-size: 20px;
 }
 
 .Address_Street_Div,
@@ -20,13 +19,14 @@
 
 .AddAddress_Div {
 	background-color: rgb(228, 248, 255);
-	margin-left: 20px;
-	margin-right: 20px;
-	border: 1px dotted gold;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 	border-radius: 10px;
-	width: 450px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	width: 380px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 5px;
 }
 
 .Address_Street_Class,

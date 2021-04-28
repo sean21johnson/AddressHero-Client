@@ -2,6 +2,7 @@
 	background-color: rgb(70, 70, 255);
 	margin-top: 25px;
 	padding: 5px;
+	min-width: 380px;
 }
 
 .footer_brand-container {
